@@ -1,1 +1,40 @@
-<p>articles-favoris works!</p>
+<div class="containers">
+    <div class="container1">
+        <h1>Favoris</h1>
+        <h2>Finies les heures perdues devant mon <br> dressing !</h2>
+        <div class="lesBoutons">
+            <a class="btn" [routerLink]="['monDressing']">Ajouter mes habits au dressing</a>
+            <a class="btn" [routerLink]="['maTenue']">Proposes-moi une tenue!</a>
+        </div>
+
+    </div>
+    <div class="container2">
+        <img class="imageAcceuil" src="./assets/images/imageAcceuil1.png " />
+    </div>
+    <div class="container3">
+    </div>
+</div>
+
+
+<!--Commun a toutes les pages -->
+<div class="commonFooter ">
+    <div class="elegance ">
+        <img class="imageElegance " src="./assets/images/elegance.png " />
+    </div>
+    <footer class="page-footer font-small mdb-color pt-4 ">
+        <div class="container text-center text-md-left ">
+            <div class="row d-flex ">
+                <div class="col-md-7 col-lg-8 ">
+                    <p class="copyright ">© 2020 Copyright:
+                        <strong> DressMe</strong>
+                    </p>
+                </div>
+                <div class="col-lg-2 ">
+                    <div class="tcontactus ">
+                        <a class="contactus " [routerLink]=" [ 'contact'] ">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
