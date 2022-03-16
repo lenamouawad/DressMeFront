@@ -1,0 +1,126 @@
+            img {
+                height: 30px;
+                width: 30;
+            }
+            
+            .navbar {
+                width: 50%;
+                position: absolute;
+            }
+            
+            .navbar-custom {
+                background-color: rgb(12, 18, 29);
+                color: white;
+            }
+            
+            .container-fluid {
+                padding-left: 70%;
+            }
+            
+            .iconAcceuil {
+                padding-left: 30px;
+                height: 40px;
+            }
+            
+            .iconDressing {
+                padding-left: 35px;
+                height: 40px;
+            }
+            
+            .iconTenue {
+                padding-left: 24px;
+                height: 40px;
+            }
+            
+            .iconVoyage {
+                padding-left: 28px;
+                height: 40px;
+            }
+            
+            .iconProfil {
+                padding-left: 26px;
+                height: 38px;
+                margin-top: 2px;
+            }
+            
+            .navbar-custom .nav-link {
+                color: white;
+                font-size: larger;
+                font-family: monospace;
+                margin-top: -10px;
+            }
+            
+            .navbar-custom .nav-link:hover {
+                color: #00acc1;
+            }
+            
+            .navbar-nav>.active>a {
+                font-weight: bold;
+            }
+            
+            .threeLinesMenu div {
+                height: 4px;
+                background-color: white;
+                margin: 5px 0;
+                border-radius: 25px;
+            }
+            
+            .threeLinesMenu {
+                display: block;
+                margin-left: auto;
+                margin: 1em 4em 0 1em;
+                cursor: pointer;
+            }
+            
+            .one {
+                width: 30px;
+            }
+            
+            .two {
+                width: 30px;
+            }
+            
+            .three {
+                width: 30px;
+            }
+            
+            .threeLinesContainer {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                width: 10%;
+                margin-left: auto;
+            }
+            
+            .card {
+                width: 150px;
+                display: none;
+                margin-right: 60px;
+            }
+            
+            .threeLinesMenu:hover+.card,
+            .card:hover {
+                display: block;
+            }
+            
+            .links {
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+            }
+            
+            .links:hover {
+                font-weight: bold;
+            }
+            
+            .header {
+                display: flex;
+                width: 100%;
+                position: absolute;
+            }
+            
+            .header2 {
+                display: flex;
+                width: 100%;
+                height: 15%;
+            }

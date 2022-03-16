@@ -1,0 +1,103 @@
+    .containers {
+        color: white;
+        background-color: rgb(12, 18, 29);
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: center;
+    }
+    
+    .container1 {
+        background-color: rgb(12, 18, 29);
+        width: 40%;
+        padding-left: 10%;
+    }
+    
+    .container1 h1 {
+        font-size: 140px;
+        color: white;
+        padding-top: 20px;
+        font-family: 'Lucky Dip Caitlin';
+    }
+    
+    .container1 h1:hover {
+        font-weight: bold;
+    }
+    
+    .container1 h2 {
+        font-size: 22px;
+        color: white;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    
+    .lesBoutons {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding-left: 7%;
+        padding-top: 50px;
+    }
+    
+    .btn {
+        font-size: 19px;
+        font-family: 'Intro Script Demo';
+        border-radius: 2em;
+        background: linear-gradient(rgb(253, 251, 251), rgb(224, 223, 223), rgb(253, 253, 253));
+        margin-bottom: 20px;
+        height: 50px;
+        padding-top: 10px;
+    }
+    
+    .btn:hover {
+        background: #00acc1;
+        color: white;
+    }
+    
+    .container2 {
+        width: 45%;
+    }
+    
+    .imageAcceuil {
+        position: relative;
+        margin: 0px 0px 20% 25%;
+    }
+    
+    #carouselExampleSlidesOnly {
+        position: relative;
+        margin: 0px 0px 20% 25%;
+    }
+    
+    .container3 {
+        width: 15%;
+    }
+    
+    .copyright {
+        margin-left: 500px;
+        color: white;
+    }
+    
+    .tcontactus {
+        margin-left: 300px;
+        color: white;
+        width: 200px;
+    }
+    
+    footer {
+        color: white;
+        background-color: #00acc1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .contactus {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .contactus:hover {
+        font-weight: bold;
+    }
