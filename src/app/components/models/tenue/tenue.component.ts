@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tenue } from 'src/app/models/tenue';
+import { TenueService } from 'src/app/services/tenue.service';
 
 @Component({
   selector: 'app-tenue',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TenueComponent implements OnInit {
 
-  constructor() { }
+  tenues : Tenue[];
+
+  constructor(
+    private service: TenueService,
+  ) { }
 
   ngOnInit(): void {
+    this.initTenue();
+  }
+
+  initTenue(){
+    this.service.findAll().subscribe(data => {
+      this.tenues = data;
+    })
   }
 
 }
