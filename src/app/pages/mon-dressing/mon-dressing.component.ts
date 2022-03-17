@@ -29,7 +29,7 @@ nbrBas:number;*/
   }
 
   initHauts(){
-    this.hautService.findAll().subscribe(data => {this.hauts = data;});
+    this.hautService.findAll().subscribe(data => {this.hauts = data.slice(0,8);});
     console.log("hello");
 
     /*this.nbrHauts = this.hauts.length;
@@ -46,7 +46,7 @@ nbrBas:number;*/
   }*/
   initHaut(){
 
-    this.hautService.findById("61e93d78f74a2e4a02ada50d").subscribe(data => {this.haut = data;})
+    this.hautService.findById("61e93fcd7c4af3322df3d16d").subscribe(data => {this.haut = data;})
     console.log("hello", this.haut.aCapuche);
 
   }

@@ -37,20 +37,25 @@
     <!--3rd row-->
     <div class="colvide2">
         <img class="flechesLeft" src="./assets/images/fleches.gif" /> </div>
+    <!--Ancien-->
+    <!--<div class="photoSpace">
+    <app-haut class="appHaut" [haut]="haut"></app-haut>
+    <app-haut class="appHaut" [haut]="haut"></app-haut>
+    <app-haut class="appHaut" [haut]="haut"></app-haut>
+    <app-haut class="appHautRight" [haut]="haut"></app-haut>
+    <div id="break "></div>
+    <app-haut class="appHaut" [haut]="haut"></app-haut>
+    <app-haut class="appHaut" [haut]="haut"></app-haut>
+    <app-haut class="appHaut " [haut]="haut"></app-haut>
+    <app-haut class="appHautRight" [haut]="haut"></app-haut></div>
+-->
     <div class="photoSpace">
-        <app-haut class="appHaut" [haut]="haut"></app-haut>
-        <app-haut class="appHaut" [haut]="haut"></app-haut>
-        <app-haut class="appHaut" [haut]="haut"></app-haut>
-        <app-haut class="appHautRight" [haut]="haut"></app-haut>
-        <div id="break "></div>
-        <app-haut class="appHaut" [haut]="haut"></app-haut>
-        <app-haut class="appHaut" [haut]="haut"></app-haut>
-        <app-haut class="appHaut " [haut]="haut"></app-haut>
-        <app-haut class="appHautRight" [haut]="haut"></app-haut>
-        <!--<ng-container *ngFor="let haut of hauts ">
-            <app-haut [haut]="haut "></app-haut>
-        </ng-container>-->
+        <ng-container class="photoSpace" *ngFor="let haut of hauts ; let i=index">
+            <app-haut class=" appHaut " [haut]="haut " *ngIf="i!=3 && i!=7"></app-haut>
+            <app-haut class=" appHautRight " [haut]="haut " *ngIf="i===3 || i===7"></app-haut>
+        </ng-container>
     </div>
+
     <div class="colvide2 "><img class="flechesRight " src="./assets/images/fleches.gif " /></div>
 </div>
 
