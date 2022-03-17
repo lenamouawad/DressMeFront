@@ -14,9 +14,7 @@ export class MonDressingComponent implements OnInit {
   hauts:Haut[];
   bas:Bas [];
   haut:Haut;
-/*nbrArticles:number;
-nbrHauts:number;
-nbrBas:number;*/
+
 
   constructor(private hautService : HautService, private basService : BasService) { }
 
@@ -24,30 +22,17 @@ nbrBas:number;*/
     this.initHauts();
     this.initBas();
     this.initHauts();
-    /*this.initNbrArticles();*/
     this.initHaut();
   }
 
   initHauts(){
     this.hautService.findAll().subscribe(data => {this.hauts = data.slice(0,8);});
-    console.log("hello");
-
-    /*this.nbrHauts = this.hauts.length;
-    console.log("hello");*/
   }
   initBas(){
-    this.basService.findAll().subscribe(data => {this.bas = data;});
-
-    /*this.nbrBas = this.bas.length;*/
+    this.basService.findAll().subscribe(data => {this.bas = data.slice(0,8);});
   }
 
-  /*initNbrArticles(){
-    this.nbrArticles = this.nbrHauts + this.nbrBas;
-  }*/
   initHaut(){
-
     this.hautService.findById("61e93fcd7c4af3322df3d16d").subscribe(data => {this.haut = data;})
-    console.log("hello", this.haut.aCapuche);
-
   }
 }
