@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import{Haut} from 'src/app/models/haut';
+import{Bas} from 'src/app/models/bas';
+import { HautService } from 'src/app/services/haut.service';
+import { BasService } from 'src/app/services/bas.service';
 
 @Component({
   selector: 'app-mon-dressing',
@@ -7,9 +11,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonDressingComponent implements OnInit {
 
-  constructor() { }
+  hauts:Haut[];
+  bas:Bas [];
+  haut:Haut;
+/*nbrArticles:number;
+nbrHauts:number;
+nbrBas:number;*/
+
+  constructor(private hautService : HautService, private basService : BasService) { }
 
   ngOnInit(): void {
+    this.initHauts();
+    this.initBas();
+    this.initHauts();
+    /*this.initNbrArticles();*/
+    this.initHaut();
   }
 
+  initHauts(){
+    this.hautService.findAll().subscribe(data => {this.hauts = data;});
+    console.log("hello");
+
+    /*this.nbrHauts = this.hauts.length;
+    console.log("hello");*/
+  }
+  initBas(){
+    this.basService.findAll().subscribe(data => {this.bas = data;});
+
+    /*this.nbrBas = this.bas.length;*/
+  }
+
+  /*initNbrArticles(){
+    this.nbrArticles = this.nbrHauts + this.nbrBas;
+  }*/
+  initHaut(){
+
+    this.hautService.findById("61e93d78f74a2e4a02ada50d").subscribe(data => {this.haut = data;})
+    console.log("hello", this.haut.aCapuche);
+
+  }
 }

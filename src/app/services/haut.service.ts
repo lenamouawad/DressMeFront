@@ -11,51 +11,51 @@ export class HautService {
 
   constructor(private http: HttpClient) { }
 
-  findAll() : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/allHauts`);
+  public findAll() : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/allHauts`);
   }
 
-  findById(id: string) : Observable<Haut>{
-    return this.http.get<Haut>(`http://localhost:56189/api/haut/id/${id}`);
+ public findById(id: string) : Observable<Haut>{
+    return this.http.get<Haut>(`http://localhost:56189/api/hauts/id/${id}`);
   }
 
-  findByMatiere(matiere: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/matiere/${matiere}`);
+  public findByMatiere(matiere: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/matiere/${matiere}`);
   }
 
-  findByMotif(motif: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/motif/${motif}`);
+  public findByMotif(motif: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/motif/${motif}`);
   }
 
-  findByType(type: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/type/${type}`);
+  public findByType(type: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/type/${type}`);
   }
 
-  findByCategorie(categrie: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/categorie/${categrie}`);
+  public findByCategorie(categrie: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/categorie/${categrie}`);
   }
 
-  findByManche(manche: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/manches/${manche}`);
+  public findByManche(manche: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/manches/${manche}`);
   }
 
-  create(haut: Haut) : Observable<Haut>{
-    return this.http.post<Haut>(`http://localhost:56189/api/haut/`, haut);
+  public create(haut: Haut) : Observable<Haut>{
+    return this.http.post<Haut>(`http://localhost:56189/api/hauts/`, haut);
   }
 
-  update(id: string, haut: Haut) : Observable<Haut>{
-    return this.http.put<Haut>(`http://localhost:56189/api/haut/update/${id}`, haut);
+  public update(id: string, haut: Haut) : Observable<Haut>{
+    return this.http.put<Haut>(`http://localhost:56189/api/hauts/update/${id}`, haut);
   }
 
-  delete(id: string) : Observable<Haut>{
-    return this.http.delete<Haut>(`http://localhost:56189/api/haut/delete/${id}`);
+  public delete(id: string) : Observable<Haut>{
+    return this.http.delete<Haut>(`http://localhost:56189/api/hauts/delete/${id}`);
   }
 
   /*estFavoris(id: string) : Observable<Haut>{
     return this.http.put<Haut>(`http://localhost:56189/api/haut/estFavoris/${id}`);
   }*/
 
-  findAllFavoris() : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/haut/AllFavoris`);
+  public findAllFavoris() : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/AllFavoris`);
   }
 }

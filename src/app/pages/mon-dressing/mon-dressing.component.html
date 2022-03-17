@@ -35,11 +35,23 @@
     <div class="colvide1"></div>
     <div id="break"></div>
     <!--3rd row-->
-    <div class="colvide2"><img class="flechesLeft" src="./assets/images/fleches.gif" />
-    </div>
+    <div class="colvide2">
+        <img class="flechesLeft" src="./assets/images/fleches.gif" /> </div>
     <div class="photoSpace">
+        <app-haut class="appHaut" [haut]="haut"></app-haut>
+        <app-haut class="appHaut" [haut]="haut"></app-haut>
+        <app-haut class="appHaut" [haut]="haut"></app-haut>
+        <app-haut class="appHautRight" [haut]="haut"></app-haut>
+        <div id="break "></div>
+        <app-haut class="appHaut" [haut]="haut"></app-haut>
+        <app-haut class="appHaut" [haut]="haut"></app-haut>
+        <app-haut class="appHaut " [haut]="haut"></app-haut>
+        <app-haut class="appHautRight" [haut]="haut"></app-haut>
+        <!--<ng-container *ngFor="let haut of hauts ">
+            <app-haut [haut]="haut "></app-haut>
+        </ng-container>-->
     </div>
-    <div class="colvide2"><img class="flechesRight" src="./assets/images/fleches.gif" /></div>
+    <div class="colvide2 "><img class="flechesRight " src="./assets/images/fleches.gif " /></div>
 </div>
 
 

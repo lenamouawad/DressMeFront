@@ -48,6 +48,7 @@
                 font-size: larger;
                 font-family: monospace;
                 margin-top: -10px;
+                font-family: 'Poppins Medium';
             }
             
             .navbar-custom .nav-link:hover {

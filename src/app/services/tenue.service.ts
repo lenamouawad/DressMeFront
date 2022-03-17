@@ -12,7 +12,7 @@ export class TenueService {
   constructor(private http: HttpClient) { }
 
   findAll() : Observable<Tenue[]>{
-    return this.http.get<Tenue[]>(`http://localhost:56189/api/tenue/allTenue`);
+    return this.http.get<Tenue[]>("http://localhost:56189/api/tenue/allTenue");
   }
 
   
