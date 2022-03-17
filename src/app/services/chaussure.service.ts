@@ -12,15 +12,15 @@ export class ChaussureService {
   constructor(private http: HttpClient) { }
 
   findAll() : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure`);
+    return this.http.get<Chaussure[]>("http://localhost:56189/api/chaussure");
   }
 
   findById(id: string) : Observable<Chaussure>{
-    return this.http.get<Chaussure>(`http://localhost:56189/api/chaussure/${id}`);
+    return this.http.get<Chaussure>("http://localhost:56189/api/chaussure/${id}");
   }
 
   findByMatiere(matiere: string) : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/matiere/${matiere}`);
+    return this.http.get<Chaussure[]>("http://localhost:56189/api/chaussure/matiere/${matiere}");
   }
 
   findByMotif(motif: string) : Observable<Chaussure[]>{
