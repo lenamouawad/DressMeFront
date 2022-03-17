@@ -29,7 +29,7 @@ nbrBas:number;*/
   }
 
   initHauts(){
-    this.hautService.findAll().subscribe(data => {this.hauts = data;});
+    this.hautService.findAll().subscribe(data => {this.hauts = data.slice(0,8);});
     console.log("hello");
 
     /*this.nbrHauts = this.hauts.length;
