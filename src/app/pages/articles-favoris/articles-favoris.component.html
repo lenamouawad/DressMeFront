@@ -1,18 +1,58 @@
-<div class="containers">
-    <div class="container1">
-        <h1>Favoris</h1>
-        <h2>Finies les heures perdues devant mon <br> dressing !</h2>
-        <div class="lesBoutons">
-            <a class="btn" [routerLink]="['monDressing']">Ajouter mes habits au dressing</a>
-            <a class="btn" [routerLink]="['maTenue']">Proposes-moi une tenue!</a>
-        </div>
-
+<div class=" contenu ">
+    <!--first row-->
+    <div class="colvide">
     </div>
-    <div class="container2">
-        <img class="imageAcceuil" src="./assets/images/imageAcceuil1.png " />
+    <div class="text1">
+        <a [routerLink]="['../monDressing']">
+            <small>RETOURNER A MON</small> <br>
+            <b>DRESSING</b></a>
     </div>
-    <div class="container3">
+    <div class="titre">
+        <h1>Mes articles favoris</h1>
     </div>
+    <div class="text2">
+        <a href="" [routerLink]="['monDressing']"><b>AJOUTER</b> <br><small>UN ARTICLE</small></a>
+    </div>
+    <div class="colvide"></div>
+    <div id="break"></div>
+    <!--2nd row-->
+    <div class="colvide1">
+    </div>
+    <div class="filtres">
+        <ul>
+            <li>
+                <a>TOUT</a></li>
+            <li>
+                <a>HAUTS</a></li>
+            <li>
+                <a>BAS</a></li>
+            <li>
+                <a>CHAUSSURES</a>
+            </li>
+            <li><a>ACCCESSOIRES</a></li>
+        </ul>
+    </div>
+    <div class="colvide1"></div>
+    <div id="break"></div>
+    <!--3rd row-->
+    <div class="colvide2">
+        <img class="flechesLeft" src="./assets/images/fleches.gif" /> </div>
+    <!--Si  on clique sur hauts -->
+    <div class="photoSpace">
+        <ng-container class="photoSpace" *ngFor="let haut of hauts ; let i=index">
+            <app-haut class=" appHaut " [haut]="haut " *ngIf="i!=3 && i!=7"></app-haut>
+            <app-haut class=" appHautRight " [haut]="haut " *ngIf="i===3 || i===7"></app-haut>
+        </ng-container>
+    </div>
+    <!--Si on clique sur Bas -->
+    <!--<div class="photoSpace">
+        <ng-container class="photoSpace" *ngFor="let ba of bas ; let i=index">
+            <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7"></app-bas>
+            <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7"></app-bas>
+        </ng-container>
+    </div>-->
+    <!--Si on clique sur tout ?-->
+    <div class="colvide2 "><img class="flechesRight " src="./assets/images/fleches.gif " /></div>
 </div>
 
 
