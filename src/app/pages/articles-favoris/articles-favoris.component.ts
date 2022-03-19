@@ -69,8 +69,8 @@ export class ArticlesFavorisComponent implements OnInit {
   }
 
   changeImageShow(nbr : number){
-    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(nbr ,nbr +8);});
-    this.basService.findAll().subscribe(data => {this.basToShow = data.slice(nbr ,nbr +8);});
+    this.hautService.findAllFavoris().subscribe(data => {this.hautsToShow = data.slice(nbr ,nbr +8);});
+    this.basService.findAllFavoris().subscribe(data => {this.basToShow = data.slice(nbr ,nbr +8);});
   }
   showImages(categorie : number) {
     var nbr = 0;
