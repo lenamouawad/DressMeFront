@@ -19,14 +19,18 @@ export class ArticlesFavorisComponent implements OnInit {
 
   whatToShow : number;
 
+  next : number;
+
   constructor(private hautService : HautService, private basService : BasService) { }
 
   ngOnInit(): void {
     this.initHauts();
     this.initBas();
+    this.initNext();
     this.initImagesToShow();
 
     this.initWhatToShow();
+
   }
 
   initHauts(){
@@ -35,26 +39,12 @@ export class ArticlesFavorisComponent implements OnInit {
   initBas(){
     this.basService.findAllFavoris().subscribe(data => {this.bas = data;});
   }
+  initNext(){
+    this.next = 0;
+  }
   initImagesToShow(){    
     this.hautService.findAllFavoris().subscribe(data => {this.hautsToShow = data.slice(0,8);});
     this.basService.findAllFavoris().subscribe(data => {this.basToShow = data.slice(0,8);});
-
-    if (this.hauts.length>8) /* length doesnt work on property... */
-     {
-    this.hautService.findAllFavoris().subscribe(data => {this.hautsToShow = data.slice(0,8);});
-      }
-  else
-  {
-    this.hautsToShow = this.hauts;
-  }
-  if (this.bas.length>8)
-     {
-      this.basService.findAllFavoris().subscribe(data => {this.basToShow = data.slice(0,8);});
-    }
-  else
-  {
-    this.basToShow =this.bas;
-  }
 }
   initWhatToShow(){this.showImages(0);}
 
@@ -67,8 +57,25 @@ export class ArticlesFavorisComponent implements OnInit {
     }
   }
 
+
+  clickArrowRight(){
+    this.next += 9;
+    this.changeImageShow(this.next);
+  }
+
+  clickArrowLeft(){
+    this.next -= 9;
+    this.changeImageShow(this.next);
+  }
+
+  changeImageShow(nbr : number){
+    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(nbr ,nbr +8);});
+    this.basService.findAll().subscribe(data => {this.basToShow = data.slice(nbr ,nbr +8);});
+  }
   showImages(categorie : number) {
     var nbr = 0;
+    this.next = 0;
+    this.changeImageShow(0);
     if (categorie==0)
     {
       nbr = 0;
@@ -83,6 +90,7 @@ export class ArticlesFavorisComponent implements OnInit {
     }
     this.whatToShow = nbr;
   }
+
 
 
 }

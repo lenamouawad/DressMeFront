@@ -36,8 +36,8 @@
     <div id="break"></div>
     <!--3rd row-->
     <div class="colvide2">
-        <img class="flechesLeft" src="./assets/images/fleches.gif" /> </div>
-    <!--Si  on clique sur hauts -->
+        <img *ngIf="showArrows() " class="flechesLeft " (click)="clickArrowLeft()" src="./assets/images/fleches.gif " /> </div>
+    <!--Si  on clique sur hauts ou bas-->
     <ng-container *ngIf="whatToShow==1 ">
         <div class="photoSpace ">
             <ng-container class="photoSpace " *ngFor="let haut of hautsToShow ; let i=index ">
@@ -55,7 +55,7 @@
         </div>
     </ng-container>
     <!--Si on clique sur tout ?-->
-    <div class="colvide2 "><img class="flechesRight " src="./assets/images/fleches.gif " /></div>
+    <div class="colvide2 "><img *ngIf="showArrows() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/fleches.gif " /></div>
 </div>
 
 

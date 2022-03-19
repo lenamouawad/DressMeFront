@@ -19,11 +19,15 @@ export class MonDressingComponent implements OnInit {
 
   whatToShow : number;
 
+  next : number;
+
   constructor(private hautService : HautService, private basService : BasService) { }
 
   ngOnInit(): void {
     this.initHauts();
     this.initBas();
+    this.initNext();
+
     this.initImagesToShow();
 
     this.initWhatToShow();
@@ -35,31 +39,17 @@ export class MonDressingComponent implements OnInit {
   initBas(){
     this.basService.findAll().subscribe(data => {this.bas = data;});
   }
+  initNext(){
+    this.next = 0;
+  }
   initImagesToShow(){    
-    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(0,8);});
+    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(0 , 8);});
     this.basService.findAll().subscribe(data => {this.basToShow = data.slice(0,8);});
-
-    if (this.hauts.length>8) /* length doesnt work on property... */
-     {
-    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(0,8);});
-      }
-  else
-  {
-    this.hautsToShow = this.hauts;
-  }
-  if (this.bas.length>8)
-     {
-      this.basService.findAll().subscribe(data => {this.basToShow = data.slice(0,8);});
-    }
-  else
-  {
-    this.basToShow =this.bas;
-  }
 }
   initWhatToShow(){this.showImages(0);}
 
    showArrows() : boolean{
-    if (this.hauts.length > 8){  /* a changer -> all hauts et bas*/
+    if (this.hauts.length > 8){  /* a changer -> all hauts et bas */
       return true;
     }
     else{
@@ -67,8 +57,24 @@ export class MonDressingComponent implements OnInit {
     }
   }
 
+  clickArrowRight(){
+    this.next += 9;
+    this.changeImageShow(this.next);
+  }
+
+  clickArrowLeft(){
+    this.next -= 9;
+    this.changeImageShow(this.next);
+  }
+
+  changeImageShow(nbr : number){
+    this.hautService.findAll().subscribe(data => {this.hautsToShow = data.slice(nbr ,nbr +8);});
+    this.basService.findAll().subscribe(data => {this.basToShow = data.slice(nbr ,nbr +8);});
+  }
   showImages(categorie : number) {
     var nbr = 0;
+    this.next = 0;
+    this.changeImageShow(0);
     if (categorie==0)
     {
       nbr = 0;
