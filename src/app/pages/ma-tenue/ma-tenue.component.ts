@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaTenueComponent implements OnInit {
 
+  imToShow : number;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.imToShow = 0;
+  }
+
+  showPic(show : number){
+    this.imToShow = show;
   }
 
 }

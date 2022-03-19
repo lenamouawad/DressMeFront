@@ -1,3 +1,48 @@
+<div class=" contenu ">
+    <!--first row-->
+    <div class="colvide">
+    </div>
+    <div class="text1">
+
+    </div>
+    <div class="titre">
+        <h1>Ma tenue</h1>
+    </div>
+    <div class="text2">
+    </div>
+    <div class="colvide"></div>
+    <div id="break"></div>
+    <!--2nd row-->
+    <div class="titreFiltres1">
+        <p class="'titreFiltres1Text">CHOISI UN STYLE</p>
+    </div>
+    <div id="break"></div>
+    <!--3rd row-->
+    <!--15+8% jusqu'a la-->
+    <div class="colvide1"></div>
+    <div class="lesbuttons">
+        <a class="btn" (mouseover)="showPic(1)" (mouseout)="showPic(0)">CASUAL</a>
+        <a class="btn" (mouseover)="showPic(2)" (mouseout)="showPic(0)">BUSINESS</a>
+        <a class="btn" (mouseover)="showPic(3)" (mouseout)="showPic(0)">SPORT</a>
+        <a class="btn" (mouseover)="showPic(4)" (mouseout)="showPic(0)">SOIREE</a>
+    </div>
+    <div class="colvide1"></div>
+    <div id="break"></div>
+    <!--3rd row-->
+    <!--10+15+8 la suite ces 75 ou 72%-->
+    <div class="colvide2"></div>
+    <!--Si  on clique sur hauts -->
+    <div class="photoSpace">
+        <img class=" " *ngIf="imToShow==0 " src="./assets/images/tenue0.png " />
+        <img class=" " *ngIf="imToShow==1 " src="./assets/images/tenue1.png " />
+        <img class=" " *ngIf="imToShow==2 " src="./assets/images/tenue2.png " />
+        <img class=" " *ngIf="imToShow==3 " src="./assets/images/tenue3.png " />
+        <img class=" " *ngIf="imToShow==4 " src="./assets/images/tenue4.png " />
+    </div>
+    <div class="colvide2 "></div>
+</div>
+
+
 <!--Commun a toutes les pages -->
 <div class="commonFooter ">
     <div class="elegance ">
