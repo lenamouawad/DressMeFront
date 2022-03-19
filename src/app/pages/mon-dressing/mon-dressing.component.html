@@ -23,36 +23,40 @@
             <li>
                 <a>TOUT</a></li>
             <li>
-                <a>HAUTS</a></li>
+                <a (click)="showImages(1)">HAUTS</a></li>
             <li>
-                <a>BAS</a></li>
+                <a (click)="showImages(2)">BAS</a></li>
             <li>
                 <a>CHAUSSURES</a>
             </li>
             <li><a>ACCCESSOIRES</a></li>
         </ul>
     </div>
-    <div class="colvide1"></div>
-    <div id="break"></div>
+    <div class=" colvide1 "></div>
+    <div id="break "></div>
     <!--3rd row-->
-    <div class="colvide2">
-        <img class="flechesLeft" src="./assets/images/fleches.gif" /> </div>
+    <div class="colvide2 ">
+        <img *ngIf="showArrows() " class="flechesLeft " src="./assets/images/fleches.gif " /> </div>
     <!--Si  on clique sur hauts -->
-    <div class="photoSpace">
-        <ng-container class="photoSpace" *ngFor="let haut of hauts ; let i=index">
-            <app-haut class=" appHaut " [haut]="haut " *ngIf="i!=3 && i!=7"></app-haut>
-            <app-haut class=" appHautRight " [haut]="haut " *ngIf="i===3 || i===7"></app-haut>
-        </ng-container>
-    </div>
-    <!--Si on clique sur Bas -->
-    <!--<div class="photoSpace">
-        <ng-container class="photoSpace" *ngFor="let ba of bas ; let i=index">
-            <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7"></app-bas>
-            <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7"></app-bas>
-        </ng-container>
-    </div>-->
+    <ng-container *ngIf="whatToShow==1 ">
+        <div class="photoSpace ">
+            <ng-container class="photoSpace " *ngFor="let haut of hautsToShow ; let i=index ">
+                <app-haut class=" appHaut " [haut]="haut " *ngIf="i!=3 && i!=7 "></app-haut>
+                <app-haut class=" appHautRight " [haut]="haut " *ngIf="i===3 || i===7 "></app-haut>
+            </ng-container>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="whatToShow==2 ">
+        <div class="photoSpace ">
+            <ng-container class="photoSpace" *ngFor="let ba of basToShow ; let i=index ">
+                <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 "></app-bas>
+                <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 "></app-bas>
+            </ng-container>
+        </div>
+    </ng-container>
     <!--Si on clique sur tout ?-->
-    <div class="colvide2 "><img class="flechesRight " src="./assets/images/fleches.gif " /></div>
+    <div class="colvide2 "><img *ngIf="showArrows() " class="flechesRight " src="./assets/images/fleches.gif " /></div>
+    <!-- (click)=" "-->
 </div>
 
 

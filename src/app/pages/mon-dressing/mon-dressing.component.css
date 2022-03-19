@@ -219,3 +219,17 @@
                     margin-bottom: 2%;
                     float: right;
                 }
+                
+                .appBas {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-right: 2.65%;
+                    margin-bottom: 2%;
+                }
+                
+                .appBasRight {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-bottom: 2%;
+                    float: right;
+                }
