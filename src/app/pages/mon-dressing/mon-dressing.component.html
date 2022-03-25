@@ -21,9 +21,9 @@
     <div class="filtres">
         <ul>
             <li>
-                <a>TOUT</a></li>
+                <a (click)="showImages(0)">TOUT</a></li>
             <li>
-                <a (click)="showImages(1)">HAUTS</a></li>
+                <a (click)="showImages(1)">HAUTS </a></li>
             <li>
                 <a (click)="showImages(2)">BAS</a></li>
             <li>
@@ -38,6 +38,14 @@
     <div class="colvide2 ">
         <img *ngIf="showArrows() " class="flechesLeft " (click)="clickArrowLeft()" src="./assets/images/fleches.gif " /> </div>
     <!--Si  on clique sur hauts -->
+    <ng-container *ngIf="whatToShow==0 ">
+        <div class="photoSpace ">
+            <ng-container *ngFor="let article of articlesToShow ; let i=index ">
+                <app-article class=" appArticle " [article]="article" *ngIf="i!=3 && i!=7"></app-article>
+                <app-article class=" appArticleRight " [article]="article" *ngIf="i===3 || i===7 "></app-article>
+            </ng-container>
+        </div>
+    </ng-container>
     <ng-container *ngIf="whatToShow==1 ">
         <div class="photoSpace ">
             <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
@@ -56,7 +64,6 @@
     </ng-container>
     <!--Si on clique sur tout ?-->
     <div class="colvide2 "><img *ngIf="showArrows() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/fleches.gif " /></div>
-    <!-- (click)=" "-->
 </div>
 
 
