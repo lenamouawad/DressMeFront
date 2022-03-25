@@ -17,6 +17,7 @@ import { ChaussureComponent } from './components/models/chaussure/chaussure.comp
 import { TenueComponent } from './components/models/tenue/tenue.component';
 import { ArticlesFavorisComponent } from './pages/articles-favoris/articles-favoris.component';
 import { AjouterArticleComponent } from './pages/page-article/ajouter-article.component';
+import { ArticleComponent } from './components/models/article/article.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AjouterArticleComponent } from './pages/page-article/ajouter-article.co
     ChaussureComponent,
     TenueComponent,
     ArticlesFavorisComponent,
-    AjouterArticleComponent
+    AjouterArticleComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

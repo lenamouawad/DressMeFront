@@ -233,3 +233,17 @@
                     margin-bottom: 2%;
                     float: right;
                 }
+                
+                .appArticle {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-right: 2.65%;
+                    margin-bottom: 2%;
+                }
+                
+                .appArticleRight {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-bottom: 2%;
+                    float: right;
+                }
