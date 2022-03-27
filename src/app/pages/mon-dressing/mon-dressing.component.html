@@ -21,15 +21,20 @@
     <div class="filtres">
         <ul>
             <li>
-                <a (click)="showImages(0)">TOUT</a></li>
-            <li>
-                <a (click)="showImages(1)">HAUTS </a></li>
-            <li>
-                <a (click)="showImages(2)">BAS</a></li>
-            <li>
-                <a>CHAUSSURES</a>
+                <a (click)="showImages(0)">TOUT </a>
             </li>
-            <li><a>ACCCESSOIRES</a></li>
+            <li>
+                <a (click)="showImages(1)">HAUTS </a>
+            </li>
+            <li>
+                <a (click)="showImages(2)">BAS</a>
+            </li>
+            <li>
+                <a (click)="showImages(3)">CHAUSSURES</a>
+            </li>
+            <li>
+                <a (click)="showImages(4)">ACCCESSOIRES</a>
+            </li>
         </ul>
     </div>
     <div class=" colvide1 "></div>
@@ -39,33 +44,62 @@
         <img *ngIf="showArrows() " class="flechesLeft " (click)="clickArrowLeft()" src="./assets/images/fleches.gif " /> </div>
     <!--Si  on clique sur hauts -->
     <ng-container *ngIf="whatToShow==0 ">
-        <div class="photoSpace ">
-            <ng-container *ngFor="let article of articlesToShow ; let i=index ">
-                <app-article class=" appArticle " [article]="article" *ngIf="i!=3 && i!=7"></app-article>
-                <app-article class=" appArticleRight " [article]="article" *ngIf="i===3 || i===7 "></app-article>
-            </ng-container>
-        </div>
+        <ng-container *ngIf="articlesToShow.length!=8">
+            <div class="photoSpaceLessThan8 ">
+                <ng-container *ngFor="let article of articlesToShow ; let i=index ">
+                    <app-article class=" appArticle " [article]="article" *ngIf="i!=3 && i!=7 && i != articlesToShow.length -1"></app-article>
+                    <app-article class=" appArticleRight " [article]="article" *ngIf="i===3 || i===7 || i=== articlesToShow.length -1"></app-article>
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="articlesToShow.length ==8">
+            <div class="photoSpace ">
+                <ng-container *ngFor="let article of articlesToShow ; let i=index ">
+                    <app-article class=" appArticle " [article]="article" *ngIf="i!=3 && i!=7 && i != articlesToShow.length -1"></app-article>
+                    <app-article class=" appArticleRight " [article]="article" *ngIf="i===3 || i===7 || i=== articlesToShow.length -1"></app-article>
+                </ng-container>
+            </div>
+        </ng-container>
     </ng-container>
     <ng-container *ngIf="whatToShow==1 ">
-        <div class="photoSpace ">
-            <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
-                <app-haut class=" appHaut " [haut]="haut" *ngIf="i!=3 && i!=7"></app-haut>
-                <app-haut class=" appHautRight " [haut]="haut" *ngIf="i===3 || i===7 "></app-haut>
-            </ng-container>
-        </div>
+        <ng-container *ngIf="hautsToShow.length!=8">
+            <div class="photoSpaceLessThan8 ">
+                <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
+                    <app-haut class=" appHaut " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appHautRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="hautsToShow.length ==8">
+            <div class="photoSpace ">
+                <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
+                    <app-haut class=" appHaut " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appHautRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
+                </ng-container>
+            </div>
+        </ng-container>
     </ng-container>
     <ng-container *ngIf="whatToShow==2 ">
-        <div class="photoSpace ">
-            <ng-container *ngFor="let ba of basToShow ; let i=index ">
-                <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 "></app-bas>
-                <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 "></app-bas>
-            </ng-container>
-        </div>
+        <ng-container *ngIf="basToShow.length!=8">
+            <div class="photoSpaceLessThan8 ">
+                <ng-container *ngFor="let ba of basToShow ; let i=index ">
+                    <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
+                    <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="basToShow.length ==8">
+            <div class="photoSpace ">
+                <ng-container *ngFor="let ba of basToShow ; let i=index ">
+                    <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
+                    <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
+                </ng-container>
+            </div>
+        </ng-container>
     </ng-container>
     <!--Si on clique sur tout ?-->
     <div class="colvide2 "><img *ngIf="showArrows() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/fleches.gif " /></div>
 </div>
-
 
 <!--Commun a toutes les pages -->
 <div class="commonFooter ">
@@ -73,19 +107,8 @@
         <img class="imageElegance " src="./assets/images/elegance.png " />
     </div>
     <footer class="page-footer font-small mdb-color pt-4 ">
-        <div class="container text-center text-md-left ">
-            <div class="row d-flex ">
-                <div class="col-md-7 col-lg-8 ">
-                    <p class="copyright ">© 2020 Copyright:
-                        <strong> DressMe</strong>
-                    </p>
-                </div>
-                <div class="col-lg-2 ">
-                    <div class="tcontactus ">
-                        <a class="contactus " [routerLink]=" [ 'contact'] ">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="copyrightText ">© 2020 Copyright
+            <strong> DressMe</strong>
+        </p>
     </footer>
 </div>

@@ -17,6 +17,7 @@
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
+                    justify-content: center;
                 }
                 
                 .contactus {
@@ -28,6 +29,42 @@
                     font-weight: bold;
                 }
                 
+                .liensFooter {
+                    display: flex;
+                    justify-content: center;
+                    /*justify-content: space-evenly;*/
+                    margin-top: 2px;
+                }
+                
+                .liensFooter>a {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                }
+                
+                footer {
+                    color: white;
+                    background-color: #00acc1;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    height: 65px;
+                    bottom: 0;
+                }
+                
+                .contactus {
+                    text-decoration: none;
+                    color: white;
+                }
+                
+                .contactus:hover {
+                    font-weight: bold;
+                }
+                
+                .copyrightText {
+                    align-self: center;
+                }
+                
                 .elegance {
                     height: 80px;
                     display: flex;
@@ -36,9 +73,7 @@
                 }
                 
                 .imageElegance {
-                    /*max-width: 100%;*/
                     max-height: 100%;
-                    /*width: 500px;*/
                     padding-bottom: 10px;
                 }
                 
@@ -184,16 +219,17 @@
                     transform: scaleX(-1);
                     cursor: pointer;
                 }
-                /* .photoSpace {
+                
+                .photoSpaceLessThan8 {
                     background-color: #171F27;
                     width: 80%;
                     height: 72%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     flex-wrap: wrap;
                     margin-bottom: 2%;
-                }*/
+                }
                 
                 .photoSpace {
                     background-color: #171F27;
@@ -228,6 +264,20 @@
                 }
                 
                 .appBasRight {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-bottom: 2%;
+                    float: right;
+                }
+                
+                .appArticle {
+                    width: 23%;
+                    height: 47.5%;
+                    margin-right: 2.65%;
+                    margin-bottom: 2%;
+                }
+                
+                .appArticleRight {
                     width: 23%;
                     height: 47.5%;
                     margin-bottom: 2%;
