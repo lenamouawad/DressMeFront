@@ -63,6 +63,14 @@ export class MonDressingComponent implements OnInit {
     {
       nbr =2;
     }
+    else if (categorie==3)
+    {
+      nbr =  3;
+    }
+    else if (categorie==4)
+    {
+      nbr =4;
+    }
     this.whatToShow = nbr;
   }
 
