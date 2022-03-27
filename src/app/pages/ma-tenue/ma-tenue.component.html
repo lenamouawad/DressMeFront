@@ -14,32 +14,103 @@
     <div id="break"></div>
     <!--2nd row-->
     <div class="titreFiltres1">
-        <p class="'titreFiltres1Text">CHOISI UN STYLE</p>
+        <p class="'titreFiltres1Text" *ngIf="next ===0">CHOISI UN STYLE</p>
+        <p class="'titreFiltres1Text" *ngIf="next ===1">C'EST POUR QUEL JOUR ?</p>
+        <p class="'titreFiltres1Text" *ngIf="next ===2">C'EST POUR QUAND ?</p>
     </div>
     <div id="break"></div>
     <!--3rd row-->
-    <!--15+8% jusqu'a la-->
-    <div class="colvide1"></div>
-    <div class="lesbuttons">
-        <a class="btn" (mouseover)="showPic(1)" (mouseout)="showPic(0)">CASUAL</a>
-        <a class="btn" (mouseover)="showPic(2)" (mouseout)="showPic(0)">BUSINESS</a>
-        <a class="btn" (mouseover)="showPic(3)" (mouseout)="showPic(0)">SPORT</a>
-        <a class="btn" (mouseover)="showPic(4)" (mouseout)="showPic(0)">SOIREE</a>
-    </div>
-    <div class="colvide1"></div>
-    <div id="break"></div>
-    <!--3rd row-->
-    <!--10+15+8 la suite ces 75 ou 72%-->
-    <div class="colvide2"></div>
-    <!--Si  on clique sur hauts -->
-    <div class="photoSpace">
-        <img class=" " *ngIf="imToShow==0 " src="./assets/images/tenue0.png " />
-        <img class=" " *ngIf="imToShow==1 " src="./assets/images/tenue1.png " />
-        <img class=" " *ngIf="imToShow==2 " src="./assets/images/tenue2.png " />
-        <img class=" " *ngIf="imToShow==3 " src="./assets/images/tenue3.png " />
-        <img class=" " *ngIf="imToShow==4 " src="./assets/images/tenue4.png " />
-    </div>
-    <div class="colvide2 "></div>
+    <!--Si premiere page-->
+    <ng-container *ngIf="next === 0">
+        <div class="colvide1"></div>
+        <div class="lesbuttons">
+            <a class="btn" (mouseover)="imToShow=1" (mouseout)="imToShow=0" (click)="madeMyChoice(1)">CASUAL</a>
+            <a class="btn" (mouseover)="imToShow=2" (mouseout)="imToShow=0" (click)="madeMyChoice(2)">BUSINESS</a>
+            <a class="btn " (mouseover)="imToShow=3 " (mouseout)="imToShow=0" (click)=" madeMyChoice(3) ">SPORT</a>
+            <a class="btn " (mouseover)="imToShow=4 " (mouseout)="imToShow=0" (click)=" madeMyChoice(4) ">SOIREE</a>
+        </div>
+        <div class="colvide1 ">
+        </div>
+        <div id="break "></div>
+        <!--3rd row-->
+        <div class="colvide2 ">
+        </div>
+        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+        <ng-container *ngIf="imgChoice !=0 ">
+            <div class="photoSpace ">
+                <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
+                <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
+                <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
+                <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
+            </div>
+        </ng-container>
+        <ng-container *ngIf="imgChoice==0 ">
+            <div class="photoSpace ">
+                <img class=" " *ngIf="imToShow==0 " src="./assets/images/tenue0.png " />
+                <img class=" " *ngIf="imToShow==1 " src="./assets/images/tenue1.png " />
+                <img class=" " *ngIf="imToShow==2 " src="./assets/images/tenue2.png " />
+                <img class=" " *ngIf="imToShow==3 " src="./assets/images/tenue3.png " />
+                <img class=" " *ngIf="imToShow==4 " src="./assets/images/tenue4.png " />
+            </div>
+        </ng-container>
+        <div class="colvide2 ">
+            <img *ngIf="showArrowRight" class="flecheRight" src="./assets/images/flecheTenue.png " />
+        </div>
+    </ng-container>
+
+    <!--Choix du jour-->
+    <ng-container *ngIf="next===1 ">
+        <div class="colvide1"></div>
+        <div class="lesbuttons ">
+            <a class="btn " (click)="next = 2">AUJOURDHUI</a>
+            <a class="btn " (click)="next = 2">DEMAIN</a>
+            <a class="btn " (click)="next = 2">APRES DEMAIN</a>
+            <a class="btn " (click)="next = 2">AUTRE</a>
+        </div>
+        <div class="colvide1 "></div>
+        <div id="break "></div>
+        <!--3rd row-->
+        <div class="colvide2 ">
+            <img *ngIf=" showArrowLeft " class="flecheLeft" (click)="clickArrowLeft()" src="./assets/images/flecheTenue.png " />
+        </div>
+        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+        <div class="photoSpace ">
+            <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
+            <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
+            <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
+            <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
+        </div>
+        <div class="colvide2 ">
+            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " />
+        </div>
+    </ng-container>
+
+    <!--Choix du temps-->
+    <ng-container *ngIf="next===2 ">
+        <div class="colvide1"></div>
+        <div class="lesbuttons ">
+            <a class="btn " (click)="showArrowRight=true">MATIN</a>
+            <a class="btn " (click)="showArrowRight=true">APREM</a>
+            <a class="btn " (click)="showArrowRight=true">SOIR</a>
+        </div>
+        <div class="colvide1 "></div>
+        <div id="break "></div>
+        <!--3rd row-->
+        <div class="colvide2 ">
+            <img *ngIf=" showArrowLeft " class="flecheLeft" (click)="clickArrowLeft()" src="./assets/images/flecheTenue.png " />
+        </div>
+        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+        <div class="photoSpace ">
+            <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
+            <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
+            <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
+            <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
+        </div>
+        <div class="colvide2 ">
+            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " />
+        </div>
+    </ng-container>
+
 </div>
 
 <!--Commun a toutes les pages -->
