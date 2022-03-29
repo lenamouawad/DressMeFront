@@ -123,10 +123,7 @@ footer {
     justify-self: center;
     justify-content: center;
     height: 15%;
-}
-
-.titre:hover h1 {
-    font-weight: bold;
+    cursor: default;
 }
 
 .colvide1 {
@@ -211,12 +208,14 @@ ul li:active {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 2%;
+    position: relative;
 }
 
 .appHaut {
     width: 23%;
     height: 47.5%;
     margin-bottom: 2%;
+    position: relative;
 }
 
 .appHautRight {
@@ -224,6 +223,7 @@ ul li:active {
     height: 47.5%;
     margin-bottom: 2%;
     float: right;
+    position: relative;
 }
 
 .appBas {
@@ -231,6 +231,7 @@ ul li:active {
     height: 47.5%;
     margin-right: 2.65%;
     margin-bottom: 2%;
+    position: relative;
 }
 
 .appBasRight {
@@ -238,6 +239,7 @@ ul li:active {
     height: 47.5%;
     margin-bottom: 2%;
     float: right;
+    position: relative;
 }
 
 .appArticle {
@@ -245,6 +247,7 @@ ul li:active {
     height: 47.5%;
     margin-right: 2.65%;
     margin-bottom: 2%;
+    position: relative;
 }
 
 .appArticleRight {
@@ -252,4 +255,5 @@ ul li:active {
     height: 47.5%;
     margin-bottom: 2%;
     float: right;
+    position: relative;
 }
