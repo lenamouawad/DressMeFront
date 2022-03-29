@@ -1,1 +1,3 @@
-<img src={{haut.imgUrl}}>
+<img class="haut" src={{haut.imgUrl}}>
+<img class="coeur" *ngIf="haut.estFavoris" src="./assets/images/favoris.png" (click)="changeFavorites()">
+<img class="coeur" *ngIf="!haut.estFavoris" src="./assets/images/pasFavoris1.png" (click)="changeFavorites()">

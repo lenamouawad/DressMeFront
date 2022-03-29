@@ -154,10 +154,6 @@
                     height: 15%;
                 }
                 
-                .titre:hover h1 {
-                    font-weight: bold;
-                }
-                
                 .colvide1 {
                     height: 10%;
                     width: 10%;
@@ -247,6 +243,7 @@
                     height: 47.5%;
                     margin-right: 2.65%;
                     margin-bottom: 2%;
+                    position: relative;
                 }
                 
                 .appHautRight {
@@ -254,6 +251,7 @@
                     height: 47.5%;
                     margin-bottom: 2%;
                     float: right;
+                    position: relative;
                 }
                 
                 .appBas {
@@ -261,6 +259,7 @@
                     height: 47.5%;
                     margin-right: 2.65%;
                     margin-bottom: 2%;
+                    position: relative;
                 }
                 
                 .appBasRight {
@@ -268,6 +267,7 @@
                     height: 47.5%;
                     margin-bottom: 2%;
                     float: right;
+                    position: relative;
                 }
                 
                 .appArticle {
@@ -275,6 +275,7 @@
                     height: 47.5%;
                     margin-right: 2.65%;
                     margin-bottom: 2%;
+                    position: relative;
                 }
                 
                 .appArticleRight {
@@ -282,4 +283,5 @@
                     height: 47.5%;
                     margin-bottom: 2%;
                     float: right;
+                    position: relative;
                 }

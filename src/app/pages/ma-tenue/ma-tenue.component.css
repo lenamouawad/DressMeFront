@@ -101,10 +101,7 @@
                     justify-self: center;
                     justify-content: center;
                     height: 15%;
-                }
-                
-                .titre:hover h1 {
-                    font-weight: bold;
+                    cursor: default;
                 }
                 
                 .colvide1 {

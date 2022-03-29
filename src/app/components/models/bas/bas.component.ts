@@ -21,5 +21,9 @@ export class BasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeFavorites(){
+    this.bas.estFavoris = !this.bas.estFavoris;
+  }
+
 
 }

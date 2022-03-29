@@ -52,7 +52,7 @@ export class HautService {
   }
 
   /*estFavoris(id: string) : Observable<Haut>{
-    return this.http.put<Haut>(`http://localhost:56189/api/haut/estFavoris/${id}`);
+    return this.http.put<Haut>(`http://localhost:56189/api/hauts/estFavoris/${id}`);
   }*/
 
   public findAllFavoris() : Observable<Haut[]>{
