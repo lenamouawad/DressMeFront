@@ -18,6 +18,8 @@ import { TenueComponent } from './components/models/tenue/tenue.component';
 import { ArticlesFavorisComponent } from './pages/articles-favoris/articles-favoris.component';
 import { AjouterArticleComponent } from './pages/page-article/ajouter-article.component';
 import { ArticleComponent } from './components/models/article/article.component';
+import { AjoutArticleComponent } from './pages/ajout-article/ajout-article.component';
+import { TenueProposeeComponent } from './pages/tenue-proposee/tenue-proposee.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ArticleComponent } from './components/models/article/article.component'
     TenueComponent,
     ArticlesFavorisComponent,
     AjouterArticleComponent,
-    ArticleComponent
+    ArticleComponent,
+    AjoutArticleComponent,
+    TenueProposeeComponent
   ],
   imports: [
     BrowserModule,

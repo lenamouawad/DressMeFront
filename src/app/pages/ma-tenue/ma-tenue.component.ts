@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-ma-tenue',
@@ -12,9 +13,13 @@ export class MaTenueComponent implements OnInit {
   imgChoice : number;
   showArrowLeft : boolean;
   showArrowRight : boolean;
-
   tenueType : number;
-  constructor() { }
+  jour : number;
+  periode : number;
+
+  constructor(public router : Router) { 
+    this.router = router;
+  }
 
   ngOnInit(): void {
     this.imToShow = 0;
@@ -23,6 +28,9 @@ export class MaTenueComponent implements OnInit {
     this.showArrowRight = false;
 
     this.imgChoice = 0;
+    this.jour = 0;
+    this.periode = 0;
+    
   }
 
   madeMyChoice(type : number){
@@ -36,6 +44,10 @@ export class MaTenueComponent implements OnInit {
 
   clickArrowLeft(){
 
+    if (this.next == 1)
+      {
+        this.tenueType = 0;
+      }
     this.next -= 1;
     this.showArrowRight = false;
     if (this.next == 0)
@@ -43,14 +55,20 @@ export class MaTenueComponent implements OnInit {
       this.imgChoice = 0;
       this.imToShow = 0;
     }
+    this.periode = 0;
+    this.jour = 0;
+    
+      
 
   }
 
   clickArrowRight(){
 
-    this.next += 1;
-    this.imToShow = 0;
-    this.imgChoice = 0;
+      this.next += 1;
+      this.imToShow = 0;
+      this.imgChoice = 0;
+    
+   
   }
 
 
