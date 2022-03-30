@@ -1,3 +1,3 @@
-<img src={{article.imgUrl}}>
+<img class="articleImg" src={{article.imgUrl}}>
 <img class="coeur" *ngIf="article.estFavoris" src="./assets/images/favoris.png" (click)="changeFavorites()">
 <img class=" coeur " *ngIf="!article.estFavoris " src="./assets/images/pasFavoris1.png " (click)="changeFavorites()">

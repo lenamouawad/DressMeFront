@@ -1,0 +1,51 @@
+<div class=" contenu ">
+    <!--first row-->
+    <div class="titre">
+        <h1>Ma tenue</h1>
+    </div>
+    <div id="break">
+    </div>
+    <!--2nd row-->
+    <div class="titreFiltres1">
+        <p class="'titreFiltres1Text">Je te propose cette tenue : </p>
+    </div>
+    <div id="break"></div>
+    <!--3rd row-->
+    <div class="colvide2 ">
+    </div>
+    <!--Les articles selectionnés -->
+
+    <div class="photoSpace ">
+        <app-haut class=" photoArticle " [haut]="tenue.haut"></app-haut>
+        <app-bas class=" photoArticleRight " [bas]="tenue.bas"></app-bas>
+        <div id="break"></div>
+
+        <app-haut class=" photoArticle " [haut]="tenue.veste"></app-haut>
+        <app-bas class=" photoArticleRight "></app-bas>
+    </div>
+    <!--<div class="photoSpace ">
+    <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
+        <app-haut class=" photoArticle " [haut]="haut" *ngIf="i==3"></app-haut>
+        <app-haut class=" photoArticleRight " [haut]="haut" *ngIf="i==7 "></app-haut>
+    </ng-container>
+</div>
+    <div class="photoSpace ">
+        <app-haut class=" photoArticle " [haut]="tenue.haut"></app-haut>
+    </div>-->
+    <!--Si on clique sur tout ?-->
+    <div class="colvide2 ">
+        <img class="flechesRight" src="./assets/images/dressMe.png " (click)="initTenue()" />
+    </div>
+</div>
+
+<!--Commun a toutes les pages -->
+<div class="commonFooter ">
+    <div class="elegance ">
+        <img class="imageElegance " src="./assets/images/elegance.png " />
+    </div>
+    <footer class="page-footer font-small mdb-color pt-4 ">
+        <p class="copyrightText ">© 2020 Copyright
+            <strong> DressMe</strong>
+        </p>
+    </footer>
+</div>

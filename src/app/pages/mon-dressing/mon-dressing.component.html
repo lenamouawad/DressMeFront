@@ -11,7 +11,7 @@
         <h1>Mon Dressing</h1>
     </div>
     <div class="text2">
-        <a href="" [routerLink]="['monDressing']"><b>AJOUTER</b> <br><small>UN ARTICLE</small></a>
+        <a [routerLink]="['../ajoutArticle']"><b>AJOUTER</b> <br><small>UN ARTICLE</small></a>
     </div>
     <div class="colvide"></div>
     <div id="break"></div>
@@ -40,8 +40,9 @@
     <div class=" colvide1 "></div>
     <div id="break "></div>
     <!--3rd row-->
-    <div class="colvide2 ">
-        <img *ngIf="showArrows() " class="flechesLeft " (click)="clickArrowLeft()" src="./assets/images/fleches.gif " /> </div>
+    <div class="colvide2">
+        <img *ngIf="showArrows() " class="flechesLeft" (click)="clickArrowLeft()" src="./assets/images/fleches.gif " />
+    </div>
     <!--Si  on clique sur hauts -->
     <ng-container *ngIf="whatToShow==0 ">
         <ng-container *ngIf="articlesToShow.length!=8">

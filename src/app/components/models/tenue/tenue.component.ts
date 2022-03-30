@@ -20,9 +20,7 @@ export class TenueComponent implements OnInit {
   }
 
   initTenue(){
-    this.service.findAll().subscribe(data => {
-      this.tenues = data;
-    })
+    
   }
 
 }

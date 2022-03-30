@@ -11,10 +11,13 @@ export class TenueService {
 
   constructor(private http: HttpClient) { }
 
-  findAll() : Observable<Tenue[]>{
+  /*public findAll() : Observable<Tenue[]>{
     return this.http.get<Tenue[]>("http://localhost:56189/api/tenue/allTenue");
+  }*/
+
+  public ProposerTenue(meteo: string, type: string) : Observable<Tenue>{
+    return this.http.get<Tenue>(`http://localhost:56189/api/tenue/${meteo}/${type}`);
   }
 
-  
-
 }
+

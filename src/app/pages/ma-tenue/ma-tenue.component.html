@@ -62,9 +62,9 @@
     <ng-container *ngIf="next===1 ">
         <div class="colvide1"></div>
         <div class="lesbuttons ">
-            <a class="btn " (click)="next = 2">AUJOURDHUI</a>
-            <a class="btn " (click)="next = 2">DEMAIN</a>
-            <a class="btn " (click)="next = 2">AUTRE</a>
+            <a class="btn " (click)="next = 2; jour = 1">AUJOURDHUI</a>
+            <a class="btn " (click)="next = 2; jour = 2">DEMAIN</a>
+            <a class="btn " (click)="next = 2; jour = 3">AUTRE</a>
         </div>
         <div class="colvide1 "></div>
         <div id="break "></div>
@@ -88,9 +88,9 @@
     <ng-container *ngIf="next===2 ">
         <div class="colvide1"></div>
         <div class="lesbuttons ">
-            <a class="btn " (click)="showArrowRight=true">MATIN</a>
-            <a class="btn " (click)="showArrowRight=true">APREM</a>
-            <a class="btn " (click)="showArrowRight=true">SOIR</a>
+            <a class="btn " (click)="showArrowRight=true; periode = 1">MATIN </a>
+            <a class="btn " (click)="showArrowRight=true; periode = 2">APREM</a>
+            <a class="btn " (click)="showArrowRight=true; periode = 3">SOIR</a>
         </div>
         <div class="colvide1 "></div>
         <div id="break "></div>
@@ -106,14 +106,14 @@
             <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
         </div>
         <div class="colvide2 ">
-            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " />
+            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " (click)=" router.navigate([ '/tenueProposee'])" />
         </div>
     </ng-container>
 
 </div>
 
 <!--Commun a toutes les pages -->
-<div class="commonFooter ">
+<div class=" commonFooter ">
     <div class="elegance ">
         <img class="imageElegance " src="./assets/images/elegance.png " />
     </div>
