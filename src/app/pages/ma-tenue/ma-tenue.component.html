@@ -1,118 +1,131 @@
 <div class=" contenu ">
-    <!--first row-->
-    <div class="colvide">
-    </div>
-    <div class="text1">
 
-    </div>
+    <!--Titre de la page-->
+
     <div class="titre">
         <h1>Ma tenue</h1>
     </div>
-    <div class="text2">
-    </div>
-    <div class="colvide"></div>
+
     <div id="break"></div>
-    <!--2nd row-->
-    <div class="titreFiltres1">
-        <p class="'titreFiltres1Text" *ngIf="next ===0">CHOISI UN STYLE</p>
-        <p class="'titreFiltres1Text" *ngIf="next ===1">C'EST POUR QUEL JOUR ?</p>
-        <p class="'titreFiltres1Text" *ngIf="next ===2">C'EST POUR QUAND ?</p>
+
+    <!--Sous titre - Choix -->
+
+    <div class="sousTitre">
+        <p *ngIf="next ===0">CHOISI UN STYLE </p>
+        <p *ngIf="next ===1">C'EST POUR QUEL JOUR ?</p>
+        <p *ngIf="next ===2 ||next===3">C'EST POUR QUAND ? </p>
+        <p *ngIf="next ===4">JE TE PROPOSE CETTE TENUE :</p>
+
     </div>
     <div id="break"></div>
-    <!--3rd row-->
-    <!--Si premiere page-->
+
+    <div class="colAroundPhotospace2 ">
+        <img *ngIf="showArrowLeft" class="flecheLeft " (click)="clickArrowLeft() " src="./assets/images/flecheTenue.png " />
+    </div>
+
+    <!--Choix de la tenue-->
+
     <ng-container *ngIf="next === 0">
-        <div class="colvide1"></div>
-        <div class="lesbuttons">
-            <a class="btn" (mouseover)="imToShow=1" (mouseout)="imToShow=0" (click)="madeMyChoice(1)">CASUAL</a>
-            <a class="btn" (mouseover)="imToShow=2" (mouseout)="imToShow=0" (click)="madeMyChoice(2)">BUSINESS</a>
-            <a class="btn " (mouseover)="imToShow=3 " (mouseout)="imToShow=0" (click)=" madeMyChoice(3) ">SPORT</a>
-            <a class="btn " (mouseover)="imToShow=4 " (mouseout)="imToShow=0" (click)=" madeMyChoice(4) ">SOIREE</a>
+        <div class="photoSpace2">
+            <div class="lesbuttons ">
+                <div id="break"></div>
+                <!--<a class="btn " [ngStyle]="{'color' : tenueType === 1 ? 'white' : 'black', 'background-color': tenueType === 1 ? '#00acc1' : ' linear-gradient(rgb(253, 251, 251), rgb(224, 223, 223), rgb(253, 253, 253))'}" (mouseover)="imToShow=1 " (mouseout)="imToShow=0 "
+                    (click)="madeMyChoice(1) ">CASUAL</a>-->
+                <a [ngClass]="{'btnOfChoice' :  tenueType === 1, 'btn' :  tenueType != 1}" (mouseover)="imToShow=1 " (mouseout)="imToShow=0 " (click)="madeMyChoice(1) ">CASUAL</a>
+                <a class="btn " (mouseover)="imToShow=2 " (mouseout)="imToShow=0 " (click)="madeMyChoice(2) ">BUSINESS</a>
+                <a class="btn " (mouseover)="imToShow=3 " (mouseout)="imToShow=0 " (click)=" madeMyChoice(3) ">SPORT</a>
+                <a class="btn " (mouseover)="imToShow=4 " (mouseout)="imToShow=0 " (click)=" madeMyChoice(4) ">SOIREE</a>
+            </div>
+            <div id="break "></div>
+            <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+            <ng-container *ngIf="imgChoice !=0 ">
+                <div class="imgChange ">
+                    <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
+                    <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
+                    <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
+                    <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
+                </div>
+            </ng-container>
+            <ng-container *ngIf="imgChoice==0 ">
+                <div class="imgChange ">
+                    <img class=" " *ngIf="imToShow==0 " src="./assets/images/tenue0.png " />
+                    <img class=" " *ngIf="imToShow==1 " src="./assets/images/tenue1.png " />
+                    <img class=" " *ngIf="imToShow==2 " src="./assets/images/tenue2.png " />
+                    <img class=" " *ngIf="imToShow==3 " src="./assets/images/tenue3.png " />
+                    <img class=" " *ngIf="imToShow==4 " src="./assets/images/tenue4.png " />
+                </div>
+            </ng-container>
         </div>
-        <div class="colvide1 ">
-        </div>
-        <div id="break "></div>
-        <!--3rd row-->
-        <div class="colvide2 ">
-        </div>
-        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
-        <ng-container *ngIf="imgChoice !=0 ">
-            <div class="photoSpace ">
+    </ng-container>
+
+    <!--Choix du jour-->
+
+    <ng-container *ngIf="next===1 ">
+
+        <div class="photoSpace2 ">
+            <div class="lesbuttons ">
+                <a class="btn " (click)="next=2 ; jour=1 ">AUJOURDHUI</a>
+                <a class="btn " (click)="next=2 ; jour=2 ">DEMAIN</a>
+                <a class="btn " (click)="next=2 ; jour=3 ">AUTRE</a>
+            </div>
+            <div id="break "></div>
+
+            <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+            <div class="imgChange ">
                 <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
                 <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
                 <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
                 <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
             </div>
-        </ng-container>
-        <ng-container *ngIf="imgChoice==0 ">
-            <div class="photoSpace ">
-                <img class=" " *ngIf="imToShow==0 " src="./assets/images/tenue0.png " />
-                <img class=" " *ngIf="imToShow==1 " src="./assets/images/tenue1.png " />
-                <img class=" " *ngIf="imToShow==2 " src="./assets/images/tenue2.png " />
-                <img class=" " *ngIf="imToShow==3 " src="./assets/images/tenue3.png " />
-                <img class=" " *ngIf="imToShow==4 " src="./assets/images/tenue4.png " />
-            </div>
-        </ng-container>
-        <div class="colvide2 ">
-            <img *ngIf="showArrowRight" class="flecheRight" src="./assets/images/flecheTenue.png " />
-        </div>
-    </ng-container>
-
-    <!--Choix du jour-->
-    <ng-container *ngIf="next===1 ">
-        <div class="colvide1"></div>
-        <div class="lesbuttons ">
-            <a class="btn " (click)="next = 2; jour = 1">AUJOURDHUI</a>
-            <a class="btn " (click)="next = 2; jour = 2">DEMAIN</a>
-            <a class="btn " (click)="next = 2; jour = 3">AUTRE</a>
-        </div>
-        <div class="colvide1 "></div>
-        <div id="break "></div>
-        <!--3rd row-->
-        <div class="colvide2 ">
-            <img *ngIf=" showArrowLeft " class="flecheLeft" (click)="clickArrowLeft()" src="./assets/images/flecheTenue.png " />
-        </div>
-        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
-        <div class="photoSpace ">
-            <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
-            <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
-            <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
-            <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
-        </div>
-        <div class="colvide2 ">
-            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " />
         </div>
     </ng-container>
 
     <!--Choix du temps-->
-    <ng-container *ngIf="next===2 ">
-        <div class="colvide1"></div>
-        <div class="lesbuttons ">
-            <a class="btn " (click)="showArrowRight=true; periode = 1">MATIN </a>
-            <a class="btn " (click)="showArrowRight=true; periode = 2">APREM</a>
-            <a class="btn " (click)="showArrowRight=true; periode = 3">SOIR</a>
-        </div>
-        <div class="colvide1 "></div>
-        <div id="break "></div>
-        <!--3rd row-->
-        <div class="colvide2 ">
-            <img *ngIf=" showArrowLeft " class="flecheLeft" (click)="clickArrowLeft()" src="./assets/images/flecheTenue.png " />
-        </div>
-        <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
-        <div class="photoSpace ">
-            <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
-            <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
-            <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
-            <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
-        </div>
-        <div class="colvide2 ">
-            <img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " (click)=" router.navigate([ '/tenueProposee'])" />
+    <ng-container *ngIf="next===2 || next === 3">
+        <div class="photoSpace2 ">
+            <div class="lesbuttons ">
+                <!--<a class="btn " (click)="next=3; periode=1 " [ngStyle]="{'color' : periode === 1 ? 'white' : 'black', 'background-color': periode === 1 ? '#00acc1' : ' linear-gradient(rgb(253, 251, 251), rgb(224, 223, 223), rgb(253, 253, 253))'}">MATIN </a>
+-->
+                <a (click)="next=3; periode=1 " [ngClass]="{'btnOfChoice' :  periode === 1, 'btn' :  periode != 1}">MATIN </a>
+                <a class="btn " (click)="next=3; periode=2 " [ngClass]="{'btnOfChoice' :  periode === 2, 'btn' :  periode != 2}">APREM</a>
+                <a class="btn " (click)="next=3; periode=3 " [ngClass]="{'btnOfChoice' :  periode === 3, 'btn' :  periode != 3}">SOIR</a>
+            </div>
+            <div id="break "></div>
+            <!--Les images en fonction de ce qu'on choisi comme type de tenue-->
+            <div class="imgChange">
+                <img class=" " *ngIf="imgChoice==1 " src="./assets/images/tenue1.png " />
+                <img class=" " *ngIf="imgChoice==2 " src="./assets/images/tenue2.png " />
+                <img class=" " *ngIf="imgChoice==3 " src="./assets/images/tenue3.png " />
+                <img class=" " *ngIf="imgChoice==4 " src="./assets/images/tenue4.png " />
+            </div>
         </div>
     </ng-container>
 
+    <!-- Tenue proposée -->
+    <ng-container *ngIf="next===4  ">
+        <div class="photoSpace2 ">
+            <app-haut class=" photoArticle " [haut]="tenue.haut"></app-haut>
+            <app-bas class=" photoArticleRight " [bas]="tenue.bas"></app-bas>
+            <div id="break"></div>
+            <app-haut class=" photoArticle " [haut]="tenue.veste"></app-haut>
+            <app-bas class=" photoArticleRight "></app-bas>
+        </div>
+    </ng-container>
+
+    <div class="colAroundPhotospace2 ">
+        <!--<img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " (click)=" router.navigate([ '/tenueProposee'])" />-->
+        <img *ngIf="next == 3" class="flecheRight " src="./assets/images/flecheTenue.png " (click)="clickArrowRight()" />
+        <div class="rightBox" *ngIf="next === 4 ">
+            <img class="magicWand " src="./assets/images/dressMe.png " (click)="initTenue()" />
+            <a class="autrePopositionText" (click)=" initTenue() ">AUTRE <br> PROPOSITION</a>
+        </div>
+
+    </div>
+
+
 </div>
 
-<!--Commun a toutes les pages -->
+<!-- Footer -->
 <div class=" commonFooter ">
     <div class="elegance ">
         <img class="imageElegance " src="./assets/images/elegance.png " />

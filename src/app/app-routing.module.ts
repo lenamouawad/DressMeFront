@@ -7,7 +7,6 @@ import { MonDressingComponent } from './pages/mon-dressing/mon-dressing.componen
 import { MonProfilComponent } from './pages/mon-profil/mon-profil.component';
 import { PageAcceuilComponent } from './pages/page-acceuil/page-acceuil.component';
 import { PageVoyageComponent } from './pages/page-voyage/page-voyage.component';
-import { TenueProposeeComponent } from './pages/tenue-proposee/tenue-proposee.component';
 
 const routes: Routes = [
   {path:"", component: PageAcceuilComponent},
@@ -20,7 +19,6 @@ const routes: Routes = [
   {path:"authentification", component: PageAcceuilComponent},
   {path:"contact", component: PageAcceuilComponent},
   {path:"ajoutArticle", component: AjoutArticleComponent},
-  {path:"tenueProposee", component:TenueProposeeComponent}
 ];
 
 @NgModule({

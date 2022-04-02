@@ -1,0 +1,31 @@
+    footer {
+        color: white;
+        background-color: #00acc1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        height: 65px;
+        bottom: 0;
+    }
+    
+    .elegance {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        /* background-color: green;*/
+    }
+    
+    .imageElegance {
+        max-height: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .commonFooter {
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .copyrightText {
+        align-self: center;
+    }

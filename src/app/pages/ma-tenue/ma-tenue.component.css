@@ -1,132 +1,18 @@
-                .liensFooter {
-                    display: flex;
-                    justify-content: center;
-                    /*justify-content: space-evenly;*/
-                    margin-top: 2px;
-                }
-                
-                .liensFooter>a {
-                    margin-right: 20px;
-                    margin-left: 20px;
-                }
-                
-                footer {
-                    color: white;
-                    background-color: #00acc1;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    height: 65px;
-                    bottom: 0;
-                }
-                
-                .contactus {
-                    text-decoration: none;
-                    color: white;
-                }
-                
-                .contactus:hover {
-                    font-weight: bold;
-                }
-                
-                .elegance {
-                    height: 80px;
-                    display: flex;
-                    justify-content: center;
-                    background-color: #171F27;
-                }
-                
-                .imageElegance {
-                    max-height: 100%;
-                    padding-bottom: 10px;
-                }
-                
-                .commonFooter {
-                    bottom: 0;
-                    width: 100%;
-                }
-                
-                .copyrightText {
-                    align-self: center;
-                }
-                /*Partie contenu*/
-                
-                .contenu {
-                    background-color: #171F27;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    height: 100vh;
-                }
-                
-                #break {
-                    flex-basis: 100%;
-                    height: 0px;
-                    /*background-color: aqua;*/
-                }
-                
-                .titreFiltres1 {
-                    display: flex;
-                    flex-basis: 100%;
-                    height: 5%;
-                    width: 100%;
-                    font-family: 'Poppins Medium';
-                    justify-items: center;
-                    color: white;
-                    justify-content: center;
-                    width: 100%;
-                    font-size: larger;
-                    /* background: fuchsia;*/
-                    padding-top: 5px;
-                }
-                
-                .colvide {
-                    width: 10%;
-                    /*background-color: yellowgreen;*/
-                    height: 15%;
-                }
-                
-                .titre h1 {
-                    font-size: 95px;
-                    color: white;
-                    font-family: 'Lucky Dip Caitlin';
-                }
-                
-                .titre {
-                    width: 80%;
-                    /* background-color: yellow;*/
-                    display: flex;
-                    justify-self: center;
-                    justify-content: center;
-                    height: 15%;
-                    cursor: default;
-                }
-                
-                .colvide1 {
-                    height: 10%;
-                    width: 30%;
-                }
-                
-                .filtres {
-                    height: 10%;
-                    /*  background-color: green;*/
-                    width: 40%;
-                    padding-top: 1.5%;
-                }
-                
-                .colvide2 {
-                    height: 70%;
-                    /* background-color: pink;*/
+                @import './../../../app/assets/footer.css';
+                @import './../../../app/assets/styleCommun.css';
+                .colAroundPhotospace2 {
+                    height: 75%;
+                    /*background-color: pink;*/
                     width: 25%;
                     display: flex;
+                    display: flex;
+                    align-items: center;
                 }
                 
-                .photoSpace {
+                .photoSpace2 {
                     /*background-color: blue;*/
                     width: 50%;
-                    height: 70%;
+                    height: 75%;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -138,14 +24,35 @@
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    justify-content: space-between;
-                    width: 40%;
-                    /* background-color: violet;
-                */
+                    justify-content: space-evenly;
+                    width: 100%;
+                    /* background-color: yellow;*/
                     height: 10%;
-                    padding-top: 20px;
                     font-family: 'Poppins Medium';
                     align-items: center;
+                    text-align: center;
+                }
+                
+                .imgChange {
+                    /*background-color: red;*/
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .btnOfChoice {
+                    font-family: 'Poppins Medium';
+                    border-radius: 2em;
+                    background: #00acc1;
+                    color: white;
+                    margin-bottom: 20px;
+                    height: 50px;
+                    padding-top: 10px;
+                    width: 20%;
+                    text-decoration: none;
+                    cursor: pointer;
+                    text-align: center;
                 }
                 
                 .btn {
@@ -156,7 +63,7 @@
                     margin-bottom: 20px;
                     height: 50px;
                     padding-top: 10px;
-                    align-items: center;
+                    text-align: center;
                     width: 20%;
                 }
                 
@@ -164,12 +71,6 @@
                     background: #00acc1;
                     color: white;
                 }
-                
-                .btn:active {
-                    background: #00acc1;
-                    color: white;
-                }
-                /* More */
                 
                 .flecheLeft {
                     float: right;
@@ -181,6 +82,16 @@
                     margin-left: 90%;
                 }
                 
+                .photoArticle {
+                    width: 30%;
+                    height: 46%;
+                }
+                
+                .photoArticleRight {
+                    width: 30%;
+                    height: 46%;
+                }
+                
                 .flecheRight {
                     float: left;
                     -webkit-transform: scaleX(-1);
@@ -189,4 +100,31 @@
                     max-width: 10%;
                     max-height: 10%;
                     align-self: center;
+                }
+                
+                .rightBox {
+                    width: 100%;
+                    height: 10%;
+                    float: left;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    /*background-color: green;*/
+                }
+                
+                .magicWand {
+                    width: 15%;
+                }
+                
+                .autrePopositionText {
+                    /*font-size: 19px;*/
+                    font-family: 'Poppins Medium';
+                    color: white;
+                    text-decoration: none;
+                }
+                
+                .autrePopositionText:hover {
+                    color: #00acc1;
                 }
