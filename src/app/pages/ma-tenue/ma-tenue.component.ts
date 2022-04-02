@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Tenue } from 'src/app/models/tenue';
+import { TenueService } from 'src/app/services/tenue.service';
 
 @Component({
   selector: 'app-ma-tenue',
@@ -17,7 +19,9 @@ export class MaTenueComponent implements OnInit {
   jour : number;
   periode : number;
 
-  constructor(public router : Router) { 
+  tenue : Tenue;
+
+  constructor(public router : Router, private tenueService : TenueService) { 
     this.router = router;
   }
 
@@ -36,39 +40,39 @@ export class MaTenueComponent implements OnInit {
   madeMyChoice(type : number){
     this.imgChoice = type;
     this.showArrowLeft = true;
-   // this.showArrowRight = true;
-
     this.tenueType = type;
     this.next = 1;
   }
 
   clickArrowLeft(){
-
     if (this.next == 1)
       {
-        this.tenueType = 0;
+         this.tenueType = 0;
+          this.imgChoice = 0;
+         this.imToShow = 0;
+         this.showArrowLeft = false;
       }
-    this.next -= 1;
-    this.showArrowRight = false;
-    if (this.next == 0)
-    {
-      this.imgChoice = 0;
-      this.imToShow = 0;
+      if (this.next != 4){
+        this.periode = 0;
+        this.jour = 0;
+      }
+    if (this.next != 3){
+      this.next -= 1;
     }
-    this.periode = 0;
-    this.jour = 0;
-    
-      
+    else{
+      this.next -= 2;
 
+    }
+    
   }
 
   clickArrowRight(){
+      this.next = 4;
+      this.initTenue();
+  }
 
-      this.next += 1;
-      this.imToShow = 0;
-      this.imgChoice = 0;
-    
-   
+  initTenue(){
+    this.tenueService.ProposerTenue("chaud", "habille").subscribe(data => {this.tenue = data;});
   }
 
 

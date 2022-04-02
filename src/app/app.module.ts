@@ -19,7 +19,6 @@ import { ArticlesFavorisComponent } from './pages/articles-favoris/articles-favo
 import { AjouterArticleComponent } from './pages/page-article/ajouter-article.component';
 import { ArticleComponent } from './components/models/article/article.component';
 import { AjoutArticleComponent } from './pages/ajout-article/ajout-article.component';
-import { TenueProposeeComponent } from './pages/tenue-proposee/tenue-proposee.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { TenueProposeeComponent } from './pages/tenue-proposee/tenue-proposee.co
     ArticlesFavorisComponent,
     AjouterArticleComponent,
     ArticleComponent,
-    AjoutArticleComponent,
-    TenueProposeeComponent
+    AjoutArticleComponent
   ],
   imports: [
     BrowserModule,
