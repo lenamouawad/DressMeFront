@@ -1,4 +1,8 @@
-.empty {
-    background-color: #171F27;
-    height: 100px;
-}
+        .empty {
+            background-color: #171F27;
+            /* height: 10vh;*/
+        }
+        
+        app-navbar {
+            height: 10 vh;
+        }
