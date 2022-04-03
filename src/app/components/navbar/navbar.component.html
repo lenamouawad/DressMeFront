@@ -1,58 +1,56 @@
-<div class="header">
-    <nav class="navbar navbar-expand-lg navbar-custom ">
-        <div class="container-fluid ">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="col-xs-offset-1 col-xs-2">
-                    <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="">
-                        <img class="iconAcceuil" src="./assets/icons/acceuilIcon.png " routerLink="" />
-                        <br> Accueil
-                    </a>
-                </div>
-                <div class="col-xs-2 ">
-                    <a class="nav-item nav-link " [routerLinkActive]="['active']" routerLink="monDressing">
-                        <img class="iconDressing" src="./assets/icons/dressingIcon.png " routerLink="monDressing" />
-                        <br>Dressing
-                    </a>
-                </div>
-                <div class="col-xs-2 ">
-                    <a class="nav-item nav-link " [routerLinkActive]="['active']" routerLink="maTenue">
-                        <img class="iconTenue " src="./assets/icons/tenueIcon.png" routerLink="maTenue" />
-                        <br>Tenue
-                    </a>
-                </div>
-                <div class=" col-xs-2 ">
-                    <a class="nav-item nav-link " [routerLinkActive]="['active']" routerLink="voyage">
-                        <img class="iconVoyage " src="./assets/icons/voyageIcon.png " routerLink="voyage" />
-                        <br> Voyage
-                    </a>
-                </div>
-                <div class="col-xs-2 ">
-                    <a class="nav-item nav-link " [routerLinkActive]="['active']" routerLink="profil">
-                        <img class="iconProfil " src="./assets/icons/profilIcon.png " routerLink="profil" />
-                        <br>Profil
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<div class="emptyrow">
+    <!-- Three lines menu-->
+    <div class="rightIcons">
+        <a routerLink="monCompte">
+            <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
+        </a>
+        <a routerLink="parametres">
+            <img class="iconeHeader" src="./assets/icons/Login.png " />
+        </a>
+    </div>
     <div class="threeLinesContainer">
         <div class="threeLinesMenu ">
             <div class="one"></div>
             <div class="two"></div>
             <div class="three"></div>
         </div>
+        <!-- Liste icones-->
         <div class="card ">
             <ul class="list-group list-group-flush ">
                 <li class="list-group-item">
-                    <a class="links" routerLink="parametres">Paramètres</a>
+                    <a class="links">
+                        <img class="icone" src="./assets/icons/acceuilIcon.png " routerLink="" />
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <a class="links" routerLink="monCompte">Mon compte</a>
+                    <a class="links">
+                        <img class="icone" src="./assets/icons/dressingIcon.png " routerLink="../monDressing" />
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <a class="links" routerLink="authentification">Se déconnecter</a>
+                    <a class="links">
+                        <img class="icone " src="./assets/icons/tenueIcon.png" routerLink="../maTenue" />
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="links">
+                        <img class="icone " src="./assets/icons/voyageIcon.png " routerLink="../voyage" />
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="links">
+                        <img class="icone " src="./assets/icons/profilIcon.png " routerLink="../profil" />
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="links">
+                        <img class="icone " src="./assets/icons/contactUs.png " routerLink="../profil" />
+                    </a>
                 </li>
             </ul>
         </div>
+        <!-- Icones settings et deconnexion-->
     </div>
+</div>
+<div class="colvide">
 </div>

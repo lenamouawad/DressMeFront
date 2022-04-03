@@ -1,297 +1,266 @@
-        .liensFooter {
-            display: flex;
-            justify-content: center;
-            /*justify-content: space-evenly;*/
-            margin-top: 2px;
-        }
-        
-        .liensFooter>a {
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-        
-        footer {
-            color: white;
-            background-color: #00acc1;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            height: 65px;
-            bottom: 0;
-        }
-        
-        .contactus {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .contactus:hover {
-            font-weight: bold;
-        }
-        
-        .elegance {
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            background-color: #171F27;
-        }
-        
-        .imageElegance {
-            max-height: 100%;
-            padding-bottom: 10px;
-        }
-        
-        .underText {
-            max-width: 35%;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-        }
-        
-        .underTextMirror {
-            max-width: 35%;
-            float: right;
-        }
-        
-        .commonFooter {
-            bottom: 0;
-            width: 100%;
-        }
-        
-        .copyrightText {
-            align-self: center;
-        }
-        /*Partie contenu*/
-        
-        .contenu {
-            background-color: #171F27;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            height: 100vh;
-        }
-        
-        .flecheRight {
-            float: left;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            cursor: pointer;
-            max-width: 10%;
-            max-height: 10%;
-            align-self: center;
-        }
-        
-        .flecheLeft {
-            float: right;
-            /* this doesnt work...*/
-            cursor: pointer;
-            max-width: 10%;
-            max-height: 10%;
-            align-self: center;
-            margin-left: 90%;
-        }
-        
-        #break {
-            flex-basis: 100%;
-            height: 0px;
-            background-color: aqua;
-        }
-        
-        .colvide {
-            width: 10%;
-            background-color: #171F27;
-            height: 15%;
-        }
-        
-        .text1 {
-            color: white;
-            font-size: 19px;
-            width: 20%;
-            text-decoration: none;
-            height: 15%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .text2 {
-            background-color: #171F27;
-            font-size: 19px;
-            width: 20%;
-            height: 15%;
-        }
-        
-        .text2 a {
-            display: inline-block;
-            width: 100%;
-            text-align: right;
-        }
-        
-        .text1 a,
-        .text2 a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Poppins Medium';
-        }
-        
-        .text1 a:hover,
-        .text2 a:hover {
-            color: #00acc1;
-        }
-        
-        .titre h1 {
-            font-size: 95px;
-            color: white;
-            font-family: 'Lucky Dip Caitlin';
-        }
-        
-        .titre {
-            /*width: 500px;*/
-            width: 40%;
-            background-color: #171F27;
-            display: flex;
-            justify-self: center;
-            justify-content: center;
-            height: 15%;
-            cursor: default;
-        }
-        
-        .colvide1 {
-            height: 10%;
-            width: 10%;
-            background-color: #171F27;
-        }
-        
-        .filtres {
-            height: 10%;
-            background-color: #171F27;
-            width: 80%;
-            padding-top: 1.7%;
-        }
-        
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        ul:first-child {
-            padding-left: 0px;
-        }
-        
-        ul li {
-            color: white;
-            cursor: pointer;
-            font-family: 'Poppins Medium';
-        }
-        
-        ul li:hover {
-            color: #00acc1;
-        }
-        
-        ul li:active {
-            color: #00acc1;
-            font-weight: bold;
-        }
-        
-        .colvide2 {
-            height: 75%;
-            /*background-color: red;*/
-            width: 10%;
-            display: flex;
-            align-items: center;
-            padding-bottom: 2%;
-        }
-        
-        .flechesLeft {
-            cursor: pointer;
-            max-width: 30%;
-            max-height: 30%;
-            align-self: center;
-            margin-left: 50%;
-        }
-        
-        .flechesRight {
-            float: left;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            cursor: pointer;
-            max-width: 30%;
-            max-height: 30%;
-            align-self: center;
-            margin-left: 20%;
-        }
-        
-        .photoSpaceLessThan8 {
-            background-color: #171F27;
-            width: 80%;
-            height: 72%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            margin-bottom: 2%;
-            z-index: 900;
-        }
-        
-        .photoSpace {
-            background-color: #171F27;
-            width: 80%;
-            height: 72%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 2%;
-            position: relative;
-            z-index: 900;
-        }
-        
-        .appHaut {
-            width: 23%;
-            height: 47.5%;
-            margin-bottom: 2%;
-            position: relative;
-        }
-        
-        .appHautRight {
-            width: 23%;
-            height: 47.5%;
-            margin-bottom: 2%;
-            float: right;
-            position: relative;
-        }
-        
-        .appBas {
-            width: 23%;
-            height: 47.5%;
-            margin-right: 2.65%;
-            margin-bottom: 2%;
-            position: relative;
-        }
-        
-        .appBasRight {
-            width: 23%;
-            height: 47.5%;
-            margin-bottom: 2%;
-            float: right;
-            position: relative;
-        }
-        
-        .appArticle {
-            width: 23%;
-            height: 47.5%;
-            margin-right: 2.65%;
-            margin-bottom: 2%;
-            position: relative;
-        }
-        
-        .appArticleRight {
-            width: 23%;
-            height: 47.5%;
-            margin-bottom: 2%;
-            float: right;
-            position: relative;
-        }
+@import './../../../app/assets/StyleNavbar.css';
+.emptyrowBottom {
+    flex-basis: 100%;
+    height: 5%;
+}
+
+.underText {
+    max-width: 35%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.underTextMirror {
+    max-width: 35%;
+    float: right;
+}
+
+.commonFooter {
+    bottom: 0;
+    width: 100%;
+}
+
+.copyrightText {
+    align-self: center;
+}
+
+
+/*Partie contenu*/
+
+.contenu {
+    background-color: #171F27;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.flecheRight {
+    float: left;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    cursor: pointer;
+    max-width: 10%;
+    max-height: 10%;
+    align-self: center;
+}
+
+.flecheLeft {
+    float: right;
+    /* this doesnt work...*/
+    cursor: pointer;
+    max-width: 10%;
+    max-height: 10%;
+    align-self: center;
+    margin-left: 90%;
+}
+
+#break {
+    flex-basis: 100%;
+    height: 0px;
+    /*background-color: aqua;*/
+}
+
+.colvide {
+    width: 15%;
+    /* background-color: pink;*/
+    height: 18%;
+}
+
+.text1 {
+    color: white;
+    font-size: 19px;
+    width: 15%;
+    text-decoration: none;
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: cyan;
+                        */
+    padding-top: 2%;
+}
+
+.text2 {
+    /*background-color: cyan;*/
+    font-size: 19px;
+    width: 15%;
+    height: 18%;
+    padding-top: 2%;
+}
+
+.text2 a {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.text1 a,
+.text2 a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins Medium';
+}
+
+.text1 a:hover,
+.text2 a:hover {
+    color: #00acc1;
+}
+
+.titre h1 {
+    font-size: 95px;
+    color: white;
+    font-family: 'Lucky Dip Caitlin';
+}
+
+.titre {
+    /*width: 500px;*/
+    width: 40%;
+    /* background-color: orange;*/
+    height: 18%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding-top: 1%;
+    cursor: default;
+}
+
+.colvide1 {
+    height: 7%;
+    width: 15%;
+    /*background-color: green;*/
+}
+
+.filtres {
+    height: 7%;
+    /* background-color: yellow;*/
+    width: 70%;
+    padding-top: 1.2%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul:first-child {
+    padding-left: 0px;
+}
+
+ul li {
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins Medium';
+}
+
+ul li:hover {
+    color: #00acc1;
+}
+
+ul li:active {
+    color: #00acc1;
+    font-weight: bold;
+}
+
+.colvide2 {
+    height: 65%;
+    /*  background-color: blue;*/
+    width: 15%;
+    display: flex;
+    align-items: center;
+    /*padding-bottom: 2%;*/
+}
+
+.flechesLeft {
+    cursor: pointer;
+    max-width: 15%;
+    max-height: 15%;
+    align-self: center;
+    margin-left: 65%;
+}
+
+.flechesRight {
+    float: left;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    cursor: pointer;
+    max-width: 15%;
+    max-height: 15%;
+    align-self: center;
+    margin-left: 20%;
+}
+
+.photoSpaceLessThan8 {
+    background-color: #171F27;
+    width: 70%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /*margin-bottom: 2%;*/
+    z-index: 900;
+}
+
+.photoSpace {
+    /*    background-color: red;*/
+    width: 70%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*margin-bottom: 2%;*/
+    position: relative;
+    z-index: 900;
+}
+
+.appHaut {
+    width: 23%;
+    height: 47.5%;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.appHautRight {
+    width: 23%;
+    height: 47.5%;
+    margin-bottom: 2%;
+    float: right;
+    position: relative;
+}
+
+.appBas {
+    width: 23%;
+    height: 47.5%;
+    margin-right: 2.65%;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.appBasRight {
+    width: 23%;
+    height: 47.5%;
+    margin-bottom: 2%;
+    float: right;
+    position: relative;
+}
+
+.appArticle {
+    width: 23%;
+    height: 47.5%;
+    margin-right: 2.65%;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.appArticleRight {
+    width: 23%;
+    height: 47.5%;
+    margin-bottom: 2%;
+    float: right;
+    position: relative;
+}

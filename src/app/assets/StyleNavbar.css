@@ -19,15 +19,7 @@
     cursor: pointer;
 }
 
-.one {
-    width: 30px;
-}
-
-.two {
-    width: 30px;
-}
-
-.three {
+.line {
     width: 30px;
 }
 
@@ -41,9 +33,10 @@
 
 .card {
     background-color: #171F27;
-    width: 10%;
-    display: block;
+    width: 50%;
+    display: none;
     /*margin-right: 60px;*/
+    cursor: pointer;
 }
 
 .threeLinesMenu:hover+.card,

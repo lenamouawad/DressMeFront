@@ -1,7 +1,62 @@
 <div class=" contenu ">
     <!--first row-->
+    <div class="emptyrow">
+        <!-- Three lines menu-->
+        <div class="rightIcons">
+            <a routerLink="monCompte">
+                <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
+            </a>
+            <a routerLink="parametres">
+                <img class="iconeHeader" src="./assets/icons/Login.png " />
+            </a>
+        </div>
+        <div class="threeLinesContainer">
+            <div class="threeLinesMenu ">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Liste icones-->
+            <div class="card ">
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone" src="./assets/icons/acceuilIcon.png " routerLink="" />
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone" src="./assets/icons/dressingIcon.png " routerLink="../monDressing" />
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone " src="./assets/icons/tenueIcon.png" routerLink="../maTenue" />
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone " src="./assets/icons/voyageIcon.png " routerLink="../voyage" />
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone " src="./assets/icons/profilIcon.png " routerLink="../profil" />
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="links">
+                            <img class="icone " src="./assets/icons/contactUs.png " routerLink="../profil" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Icones settings et deconnexion-->
+        </div>
+    </div>
     <div class="colvide">
     </div>
+    <!--Fin navbar-->
     <div class="text1">
         <a [routerLink]="['../monDressing']">
             <small>RETOURNER A MON</small> <br>
@@ -101,16 +156,6 @@
         </ng-container>
     </ng-container>
     <div class="colvide2 "><img *ngIf="showArrowRight()" class="flechesRight " (click)="clickArrowRight() " src="./assets/images/flecheTenue.png " /></div>
-</div>
-
-<!--Commun a toutes les pages -->
-<div class="commonFooter ">
-    <div class="elegance ">
-        <img class="imageElegance " src="./assets/images/favorisGif.gif " />
-    </div>
-    <footer class="page-footer font-small mdb-color pt-4 ">
-        <p class="copyrightText ">© 2020 Copyright
-            <strong> DressMe</strong>
-        </p>
-    </footer>
+    <div id="break "></div>
+    <div class="emptyrowBottom"> </div>
 </div>
