@@ -31,8 +31,8 @@ export class HautService {
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/type/${type}`);
   }
 
-  public findByCategorie(categrie: string) : Observable<Haut[]>{
-    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/categorie/${categrie}`);
+  public findByCategorie(categorie: string) : Observable<Haut[]>{
+    return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/categorie/${categorie}`);
   }
 
   public findByManche(manche: string) : Observable<Haut[]>{

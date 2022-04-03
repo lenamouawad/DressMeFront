@@ -16,6 +16,7 @@ export class MaTenueComponent implements OnInit {
   showArrowLeft : boolean;
   showArrowRight : boolean;
   tenueType : number;
+  tenueTypeToPass : string;
   jour : number;
   periode : number;
 
@@ -61,9 +62,7 @@ export class MaTenueComponent implements OnInit {
     }
     else{
       this.next -= 2;
-
-    }
-    
+    }    
   }
 
   clickArrowRight(){
@@ -72,7 +71,26 @@ export class MaTenueComponent implements OnInit {
   }
 
   initTenue(){
-    this.tenueService.ProposerTenue("chaud", "habille").subscribe(data => {this.tenue = data;});
+    // this.tenueType
+    // this.periode
+    // this.jour
+    // appeler l'api pour la meteo ?
+    switch ( this.tenueType ) {
+      case 1:
+        this.tenueTypeToPass = "decontracte";
+        break;
+      case 2:
+        this.tenueTypeToPass = "habille";
+        break;
+      case 3:
+        this.tenueTypeToPass = "sport";
+        break;
+      case 4:
+        this.tenueTypeToPass = "soiree";
+        break;
+   }
+    this.tenueService.ProposerTenue("frais",this.tenueTypeToPass).subscribe(data => {this.tenue = data;});
+    
   }
 
 

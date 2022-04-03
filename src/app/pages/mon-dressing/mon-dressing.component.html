@@ -6,12 +6,14 @@
         <a [routerLink]="['../favoris']">
             <small>AFFICHER MES</small> <br>
             <b>FAVORIS</b></a>
+        <img class="underText " src="./assets/images/test.png " />
     </div>
     <div class="titre">
         <h1>Mon Dressing</h1>
     </div>
     <div class="text2">
         <a [routerLink]="['../ajoutArticle']"><b>AJOUTER</b> <br><small>UN ARTICLE</small></a>
+        <img class="underTextMirror " src="./assets/images/test.png " />
     </div>
     <div class="colvide"></div>
     <div id="break"></div>
@@ -41,7 +43,10 @@
     <div id="break "></div>
     <!--3rd row-->
     <div class="colvide2">
-        <img *ngIf="showArrows() " class="flechesLeft" (click)="clickArrowLeft()" src="./assets/images/fleches.gif " />
+        <!--<img *ngIf="showArrows() " class="flechesLeft" (click)="clickArrowLeft()" src="./assets/images/fleches.gif " />
+        -->
+        <img *ngIf="showArrowLeft() " class="flechesLeft " src="./assets/images/flecheTenue.png " (click)="clickArrowLeft()" />
+
     </div>
     <!--Si  on clique sur hauts -->
     <ng-container *ngIf="whatToShow==0 ">
@@ -66,16 +71,16 @@
         <ng-container *ngIf="hautsToShow.length!=8">
             <div class="photoSpaceLessThan8 ">
                 <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
-                    <app-haut class=" appHaut " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
-                    <app-haut class=" appHautRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appArticle " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appArticleRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
                 </ng-container>
             </div>
         </ng-container>
         <ng-container *ngIf="hautsToShow.length ==8">
             <div class="photoSpace ">
                 <ng-container *ngFor="let haut of hautsToShow ; let i=index ">
-                    <app-haut class=" appHaut " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
-                    <app-haut class=" appHautRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appArticle " [haut]="haut" *ngIf="i!=3 && i!=7 && i != hautsToShow.length -1"></app-haut>
+                    <app-haut class=" appArticleRight " [haut]="haut" *ngIf="i===3 || i===7 || i=== hautsToShow.length -1"></app-haut>
                 </ng-container>
             </div>
         </ng-container>
@@ -84,22 +89,22 @@
         <ng-container *ngIf="basToShow.length!=8">
             <div class="photoSpaceLessThan8 ">
                 <ng-container *ngFor="let ba of basToShow ; let i=index ">
-                    <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
-                    <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
+                    <app-bas class=" appArticle " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
+                    <app-bas class=" appArticleRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
                 </ng-container>
             </div>
         </ng-container>
         <ng-container *ngIf="basToShow.length ==8">
             <div class="photoSpace ">
                 <ng-container *ngFor="let ba of basToShow ; let i=index ">
-                    <app-bas class=" appBas " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
-                    <app-bas class=" appBasRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
+                    <app-bas class=" appArticle " [bas]="ba" *ngIf="i!=3 && i!=7 && i != basToShow.length -1"></app-bas>
+                    <app-bas class=" appArticleRight " [bas]="ba" *ngIf="i===3 || i===7 || i=== basToShow.length -1"></app-bas>
                 </ng-container>
             </div>
         </ng-container>
     </ng-container>
     <!--Si on clique sur tout ?-->
-    <div class="colvide2 "><img *ngIf="showArrows() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/fleches.gif " /></div>
+    <div class="colvide2 "><img *ngIf="showArrowRight() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/flecheTenue.png " /></div>
 </div>
 
 <!--Commun a toutes les pages -->

@@ -86,9 +86,21 @@ export class MonDressingComponent implements OnInit {
   initNext(){
     this.next = 0;
   }
-   showArrows() : boolean{
-      return true;
+   showArrowRight() : boolean{
+    if (((this.whatToShow == 0) && (this.article.length - (this.next+8) > 0))
+    || ((this.whatToShow == 1) && (this.hauts.length - (this.next+8) > 0))
+    || ((this.whatToShow == 2) && (this.bas.length - (this.next+8) > 0)) ){return true;}
+    else {return false;} 
   }
+
+  showArrowLeft() : boolean{
+    if (((this.whatToShow == 0) && (this.article.length - this.next < this.article.length))
+    || ((this.whatToShow == 1) && (this.hauts.length - this.next < this.hauts.length))
+    || ((this.whatToShow == 2) && (this.bas.length - this.next < this.bas.length))
+     ){return true;}
+     else
+     {return false;}
+}
 
   clickArrowRight(){
     if (((this.whatToShow == 0) && (this.article.length - (this.next+8) > 0))
