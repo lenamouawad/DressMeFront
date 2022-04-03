@@ -1,18 +1,1 @@
-/*.haut {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.coeur {
-    width: 10%;
-    height: 10%;
-    top: 1%;
-    left: 89%;
-    position: absolute;
-    cursor: pointer;
-}
-
-*/
-
 @import './../../../assets/stylePhotosArticles.css';
