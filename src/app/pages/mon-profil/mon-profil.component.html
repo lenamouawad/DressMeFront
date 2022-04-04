@@ -1,11 +1,50 @@
-<!--Commun a toutes les pages -->
-<div class="commonFooter ">
-    <div class="elegance ">
-        <img class="imageElegance " src="./assets/images/elegance.png " />
+<div class="containers">
+    <!--Navbar-->
+    <div class="emptyrow">
+        <!-- Three lines menu-->
+        <!-- Liste icones-->
+        <div class="card ">
+            <ul class="list-group list-group-horizontal-md" routerLink="">
+                <li class="list-group-item">
+                    <img class="icone" src="./assets/icons/acceuilIcon.png " />
+                    <a class="links">
+                   ACCEUIL
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../monDressing">
+                    <img class="icone" src="./assets/icons/dressingIcon.png " />
+                    <a class="links">DRESSING
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../maTenue">
+                    <img class="icone " src="./assets/icons/tenueIcon.png" />
+                    <a class="links">TENUE
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../voyage">
+                    <img class="icone " src="./assets/icons/voyageIcon.png " />
+                    <a class="links">VOYAGE
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../profil">
+                    <img class="icone " src="./assets/icons/profilIcon.png " />
+                    <a class="links">PROFIL
+                </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Icones settings et deconnexion-->
+        <div class="rightIcons">
+            <a routerLink="monCompte">
+                <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
+            </a>
+            <a routerLink="parametres">
+                <img class="iconeHeader" src="./assets/icons/Login.png " />
+            </a>
+        </div>
     </div>
-    <footer class="page-footer font-small mdb-color pt-4 ">
-        <p class="copyrightText ">© 2020 Copyright
-            <strong> DressMe</strong>
-        </p>
-    </footer>
+
+    <div class="colvide">
+    </div>
+    <!--Fin navbar-->
 </div>

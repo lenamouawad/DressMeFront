@@ -1,1 +1,9 @@
-@import './../../../app/assets/footer.css';
+@import './../../../app/assets/StyleNavbar.css';
+.containers {
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100vh;
+}
