@@ -1,7 +1,8 @@
                 @import './../../../app/assets/footer.css';
                 @import './../../../app/assets/styleCommun.css';
+                @import './../../../app/assets/StyleNavbar.css';
                 .colAroundPhotospace2 {
-                    height: 75%;
+                    height: 70%;
                     /*background-color: pink;*/
                     width: 25%;
                     display: flex;
@@ -10,9 +11,9 @@
                 }
                 
                 .photoSpace2 {
-                    /*background-color: blue;*/
+                    /* background-color: blue;*/
                     width: 50%;
-                    height: 75%;
+                    height: 70%;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -27,7 +28,7 @@
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     width: 100%;
-                    /* background-color: yellow;*/
+                    /*  background-color: yellow;*/
                     height: 10%;
                     font-family: 'Poppins Medium';
                     align-items: center;

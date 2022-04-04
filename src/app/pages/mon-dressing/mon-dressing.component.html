@@ -1,7 +1,38 @@
 <div class=" contenu ">
-    <!--first row-->
     <div class="emptyrow">
         <!-- Three lines menu-->
+        <!-- Liste icones-->
+        <div class="card ">
+            <ul class="list-group list-group-horizontal-md" routerLink="">
+                <li class="list-group-item">
+                    <img class="icone" src="./assets/icons/acceuilIcon.png " />
+                    <a class="links">
+                       ACCEUIL
+                    </a>
+                </li>
+                <li class="list-group-item" routerLink="../monDressing">
+                    <img class="icone" src="./assets/icons/dressingIcon.png " />
+                    <a class="links">DRESSING
+                    </a>
+                </li>
+                <li class="list-group-item" routerLink="../maTenue">
+                    <img class="icone " src="./assets/icons/tenueIcon.png" />
+                    <a class="links">TENUE
+                    </a>
+                </li>
+                <li class="list-group-item" routerLink="../voyage">
+                    <img class="icone " src="./assets/icons/voyageIcon.png " />
+                    <a class="links">VOYAGE
+                    </a>
+                </li>
+                <li class="list-group-item" routerLink="../profil">
+                    <img class="icone " src="./assets/icons/profilIcon.png " />
+                    <a class="links">PROFIL
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Icones settings et deconnexion-->
         <div class="rightIcons">
             <a routerLink="monCompte">
                 <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
@@ -10,50 +41,8 @@
                 <img class="iconeHeader" src="./assets/icons/Login.png " />
             </a>
         </div>
-        <div class="threeLinesContainer">
-            <div class="threeLinesMenu ">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <!-- Liste icones-->
-            <div class="card ">
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone" src="./assets/icons/acceuilIcon.png " routerLink="" />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone" src="./assets/icons/dressingIcon.png " routerLink="../monDressing" />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone " src="./assets/icons/tenueIcon.png" routerLink="../maTenue" />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone " src="./assets/icons/voyageIcon.png " routerLink="../voyage" />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone " src="./assets/icons/profilIcon.png " routerLink="../profil" />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a class="links">
-                            <img class="icone " src="./assets/icons/contactUs.png " routerLink="../profil" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Icones settings et deconnexion-->
-        </div>
     </div>
+
     <div class="colvide">
     </div>
     <!--Fin navbar-->
