@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Chaussure } from '../models/chaussure';
+import { Matiere } from '../enums/matiere';
+import { Motifs } from '../enums/motifs';
+import { Types } from '../enums/types';
+import { CategorieChaussure } from '../enums/categoriesChaussure';
 
 
 @Injectable({
@@ -19,20 +23,20 @@ export class ChaussureService {
     return this.http.get<Chaussure>(`http://localhost:56189/api/chaussure/${id}`);
   }
 
-  findByMatiere(matiere: string) : Observable<Chaussure[]>{
+  findByMatiere(matiere: Matiere) : Observable<Chaussure[]>{
     return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/matiere/${matiere}`);
   }
 
-  findByMotif(motif: string) : Observable<Chaussure[]>{
+  findByMotif(motif: Motifs) : Observable<Chaussure[]>{
     return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/motif/${motif}`);
   }
 
-  findByType(type: string) : Observable<Chaussure[]>{
+  findByType(type: Types) : Observable<Chaussure[]>{
     return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/type/${type}`);
   }
 
-  findByCategorie(categrie: string) : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/categorie/${categrie}`);
+  findByCategorie(categorie: CategorieChaussure) : Observable<Chaussure[]>{
+    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/categorie/${categorie}`);
   }
 
   findByCategoriesMeteo(meteo: string) : Observable<Chaussure[]>{

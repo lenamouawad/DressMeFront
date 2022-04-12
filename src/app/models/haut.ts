@@ -1,89 +1,9 @@
-enum Manches
-    {
-        courtes,
-        longues,
-        pasDeManches,
-        bretelles
-    }
-
-    enum CategorieHaut
-    {
-        robe,
-        pull,
-        sweat,
-        tshirt,
-        top,
-        chemise,
-        blouse,
-        gilet,
-        veste,
-        blazer,
-        manteau,
-        doudoune,
-        trench
-    }
-
-    enum Types
-    {
-        sport,
-        decontracte,
-        habille,
-        soiree
-    }
-
-    enum Motifs
-    {
-        pasDeMotifs,
-        fleuri,
-        rayures,
-        imprime,
-        carreaux,
-        paillettes,
-        marbre,
-        geometrique,
-        strass,
-        perles,
-        chevrons,
-        texte
-    }
-
-    enum Matiere
-    {
-        denim,
-        maille,
-        coton,
-        lin,
-        fourrure,
-        laine,
-        satin,
-        soie,
-        cuir,
-        cachemire,
-        velours,
-        dentelle,
-        autre
-    }
-
-    enum Couleur
-    {
-        jaune,
-        rouge,
-        bleu,
-        orange,
-        magenta,
-        marron,
-        gris,
-        beige,
-        kaki,
-        violet,
-        rose,
-        turquoise,
-        vert,
-        blanc,
-        noir,
-        bordeaux,
-        denim
-    }
+import { CategorieHaut } from "../enums/categoriesHaut";
+import { Couleur } from "../enums/couleur";
+import { Manches } from "../enums/manches";
+import { Matiere } from "../enums/matiere";
+import { Motifs } from "../enums/motifs";
+import { Types } from "../enums/types";
 
 export class Haut {
     id: string;

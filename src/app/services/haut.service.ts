@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Haut } from '../models/haut';
+import { Matiere } from '../enums/matiere';
+import { Motifs } from '../enums/motifs';
+import { Types } from '../enums/types';
+import { CategorieHaut } from '../enums/categoriesHaut';
+import { Manches } from '../enums/manches';
 
 
 @Injectable({
@@ -19,23 +24,23 @@ export class HautService {
     return this.http.get<Haut>(`http://localhost:56189/api/hauts/id/${id}`);
   }
 
-  public findByMatiere(matiere: string) : Observable<Haut[]>{
+  public findByMatiere(matiere: Matiere) : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/matiere/${matiere}`);
   }
 
-  public findByMotif(motif: string) : Observable<Haut[]>{
+  public findByMotif(motif: Motifs) : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/motif/${motif}`);
   }
 
-  public findByType(type: string) : Observable<Haut[]>{
+  public findByType(type: Types) : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/type/${type}`);
   }
 
-  public findByCategorie(categorie: string) : Observable<Haut[]>{
+  public findByCategorie(categorie: CategorieHaut) : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/categorie/${categorie}`);
   }
 
-  public findByManche(manche: string) : Observable<Haut[]>{
+  public findByManche(manche: Manches) : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/manches/${manche}`);
   }
 
