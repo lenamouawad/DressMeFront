@@ -51,9 +51,9 @@ export class HautService {
     return this.http.delete<Haut>(`http://localhost:56189/api/hauts/delete/${id}`);
   }
 
-  /*estFavoris(id: string) : Observable<Haut>{
-    return this.http.put<Haut>(`http://localhost:56189/api/hauts/estFavoris/${id}`);
-  }*/
+  estFavoris(id: string, haut: Haut) : Observable<Haut>{
+    return this.http.put<Haut>(`http://localhost:56189/api/hauts/estFavoris/${id}`, haut);
+  }
 
   public findAllFavoris() : Observable<Haut[]>{
     return this.http.get<Haut[]>(`http://localhost:56189/api/hauts/AllFavoris`);
