@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Bas } from '../models/bas';
+import { Matiere } from '../enums/matiere';
+import { Motifs } from '../enums/motifs';
+import { Types } from '../enums/types';
+import { CategorieBas } from '../enums/categoriesBas';
 
 @Injectable({
   providedIn: 'root'
@@ -18,20 +22,20 @@ export class BasService {
     return this.http.get<Bas>(`http://localhost:56189/api/bas/${id}`);
   }
 
-  findByMatiere(matiere: string) : Observable<Bas[]>{
+  findByMatiere(matiere: Matiere) : Observable<Bas[]>{
     return this.http.get<Bas[]>(`http://localhost:56189/api/bas/matiere/${matiere}`);
   }
 
-  findByMotif(motif: string) : Observable<Bas[]>{
+  findByMotif(motif: Motifs) : Observable<Bas[]>{
     return this.http.get<Bas[]>(`http://localhost:56189/api/bas/motif/${motif}`);
   }
 
-  findByType(type: string) : Observable<Bas[]>{
+  findByType(type: Types) : Observable<Bas[]>{
     return this.http.get<Bas[]>(`http://localhost:56189/api/bas/type/${type}`);
   }
 
-  findByCategorie(categrie: string) : Observable<Bas[]>{
-    return this.http.get<Bas[]>(`http://localhost:56189/api/bas/categorie/${categrie}`);
+  findByCategorie(categorie: CategorieBas) : Observable<Bas[]>{
+    return this.http.get<Bas[]>(`http://localhost:56189/api/bas/categorie/${categorie}`);
   }
 
   create(bas: Bas) : Observable<Bas>{

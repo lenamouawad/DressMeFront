@@ -1,0 +1,20 @@
+export enum Couleur
+{
+    jaune,
+    rouge,
+    bleu,
+    orange,
+    magenta,
+    marron,
+    gris,
+    beige,
+    kaki,
+    violet,
+    rose,
+    turquoise,
+    vert,
+    blanc,
+    noir,
+    bordeaux,
+    denim
+}

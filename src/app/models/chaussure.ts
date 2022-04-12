@@ -1,15 +1,20 @@
+import { CategorieChaussure } from "../enums/categoriesChaussure";
+import { Couleur } from "../enums/couleur";
+import { Matiere } from "../enums/matiere";
+import { Motifs } from "../enums/motifs";
+import { Types } from "../enums/types";
 
 export class Chaussure {
     id: string;
-    couleur: string[];
-    matiere: string;
-    motif: string;
+    couleur: Couleur[];
+    matiere: Matiere;
+    motif: Motifs;
     imgUrl: string;
-    type: string;
-    categorie: string;
+    type: Types;
+    categorie: CategorieChaussure;
     estFavoris: boolean;
 
-    constructor(id: string, couleur: string[], matiere: string, motif: string, imgUrl: string, type: string, categorie: string, estFavoris: boolean){
+    constructor(id: string, couleur: Couleur[], matiere: Matiere, motif: Motifs, imgUrl: string, type: Types, categorie: CategorieChaussure, estFavoris: boolean){
         this.id = id;
         this.couleur = couleur;
         this.matiere = matiere;
