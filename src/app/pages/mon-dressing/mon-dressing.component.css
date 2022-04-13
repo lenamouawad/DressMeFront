@@ -105,6 +105,7 @@
 .text1 a:hover,
 .text2 a:hover {
     color: #00acc1;
+    cursor: pointer;
 }
 
 .titre h1 {
