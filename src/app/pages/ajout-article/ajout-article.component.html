@@ -1,1 +1,247 @@
-<p>ajout-article works!</p>
+<div class="containers">
+
+    <!--Navbar-->
+    <div class="emptyrow">
+        <!-- Three lines menu-->
+        <!-- Liste icones-->
+        <!--
+        <div class="card ">
+            <ul class="list-group list-group-horizontal-md" routerLink="">
+                <li class="list-group-item">
+                    <img class="icone" src="./assets/icons/acceuilIcon.png " />
+                    <a class="links">
+                   ACCEUIL
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../monDressing">
+                    <img class="icone" src="./assets/icons/dressingIcon.png " />
+                    <a class="links">DRESSING
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../maTenue">
+                    <img class="icone " src="./assets/icons/tenueIcon.png" />
+                    <a class="links">TENUE
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../voyage">
+                    <img class="icone " src="./assets/icons/voyageIcon.png " />
+                    <a class="links">VOYAGE
+                </a>
+                </li>
+                <li class="list-group-item" routerLink="../profil">
+                    <img class="icone " src="./assets/icons/profilIcon.png " />
+                    <a class="links">PROFIL
+                </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Icones settings et deconnexion-->
+        <!--
+        <div class="rightIcons">
+            <a routerLink="monCompte">
+                <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
+            </a>
+            <a routerLink="parametres">
+                <img class="iconeHeader" src="./assets/icons/Login.png " />
+            </a>
+        </div>-->
+    </div>
+
+    <div class="colvide">
+    </div>
+    <!--Fin navbar-->
+    <!--Titre de la page-->
+
+    <div class="titre">
+        <h1>Ajouter un article {{categorie}} {{sousCategorie}} {{type}}</h1>
+    </div>
+
+    <div id="break"></div>
+
+    <!-- Photo et informations de l'article ajouté -->
+    <div class="photoInformation">
+        <div class="vide">
+        </div>
+        <div class="uploadPhoto ">
+            <img class="photoUpload">
+            <div class="parcourir ">
+                <img title="Parcourir" class="addButton" src="./assets/images/add2.png "></div>
+            <div class="textButton "> Hello</div>
+        </div>
+        <!-- Choisir si haut, bas chaussure ou accessoire-->
+        <div class="choix ">
+            <div class=" textChoice ">
+            </div>
+            <div class="textChoice ">
+                <p>Il s' agit d 'un(e) : </p>
+            </div>
+            <div class="lesbuttons ">
+                <div id="break "></div>
+                <a (click)="getCategorie(1) " [ngClass]="{ 'btnOfChoice ' : categorie===1 , 'btn ' : categorie !=1 } ">HAUTS</a>
+                <a (click)="getCategorie(2) " [ngClass]="{ 'btnOfChoice ' : categorie===2 , 'btn ' : categorie !=2 } ">VESTES</a>
+                <a (click)="getCategorie(3) " [ngClass]="{ 'btnOfChoice ' : categorie===3 , 'btn ' : categorie !=3 } ">BAS</a>
+                <a (click)="getCategorie(4) " [ngClass]="{ 'btnOfChoice ' : categorie===4 , 'btn ' : categorie !=4 } ">CHAUSSURES</a>
+                <a (click)="getCategorie(5) " [ngClass]="{ 'btnOfChoice ' : categorie===5 , 'btn ' : categorie !=5 } ">ACCESSOIRES</a>
+            </div>
+
+            <!-- Si haut afficher les sous-catégories hauts-->
+            <ng-container *ngIf="categorie===1 ">
+                <div class="textChoice ">
+                    <p>C'est plutot un(e) ... ?</p>
+                </div>
+                <div class=" lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } " style="width:10% ">ROBE </a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">TSHIRT</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } " style="width:10% ">TOP</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">CHEMISE</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">BLOUSE</a>
+                    <a (click)="getSousCategorie(6) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===6 , 'btn ' : sousCategorie !=6 } " style="width:10% ">PULL</a>
+                    <a (click)="getSousCategorie(7) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===7 , 'btn ' : sousCategorie !=7 } ">SWEAT</a>
+                </div>
+            </ng-container>
+            <!-- Si veste afficher les sous-catégories veste-->
+            <ng-container *ngIf="categorie===2 ">
+                <div class="textChoice ">
+                    <p>C'est plutot un(e) ... ?</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a class="btn ">GILET</a>
+                    <a class="btn ">VESTE</a>
+                    <a class="btn ">BLAZER</a>
+                    <a class="btn ">MANTEAU</a>
+                    <a class="btn ">DOUDOUNE</a>
+                    <a class="btn ">TRENCH</a>
+                </div>
+            </ng-container>
+            <!-- Si bas afficher les sous-catégories bas-->
+            <ng-container *ngIf="categorie===3 ">
+                <div class="textChoice ">
+                    <p>C'est plutot un(e) ... ?</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a class="btn ">SHORT</a>
+                    <a class="btn ">MINIJUPE</a>
+                    <a class="btn ">JUPE</a>
+                    <a class="btn ">JEANS</a>
+                    <a class="btn ">PANTALON</a>
+                </div>
+            </ng-container>
+            <!-- Si chaussures afficher les sous-catégories chaussures-->
+            <ng-container *ngIf="categorie===4 ">
+                <div class="textChoice ">
+                    <p>C'est plutot un(e) ... ?</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a class="btn ">ESCARPIN</a>
+                    <a class="btn ">SANDALE</a>
+                    <a class="btn ">BASKET</a>
+                    <a class="btn ">BOTTE</a>
+                    <a class="btn ">MOCASSIN</a>
+                </div>
+            </ng-container>
+            <!-- Si accessoires afficher les sous-catégories accessoires-->
+            <ng-container *ngIf="categorie===5 ">
+                <div class="textChoice ">
+                    <p>C'est plutot un(e) ... ?</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a class="btn ">BIJOUX</a>
+                    <a class="btn ">LUNETTES</a>
+                    <a class="btn ">SAC</a>
+                    <a class="btn ">FOULARD</a>
+                    <a class="btn ">CEINTURE</a>
+                </div>
+            </ng-container>
+
+            <!-- Si les choix categories et  sous-catégories sont fais-->
+            <ng-container *ngIf="(sousCategorie!==0)&&(categorie !==0 ) ">
+                <div class="textChoice ">
+                    <p>Ca correspond plutot à quel type ?</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getType(1) " [ngClass]="{ 'btnOfChoice ' : type===1 , 'btn ' : type !=1 } ">CASUAL </a>
+                    <a (click)="getType(2) " [ngClass]="{ 'btnOfChoice ' : type===2 , 'btn ' : type !=2 } ">SPORT</a>
+                    <a (click)="getType(3) " [ngClass]="{ 'btnOfChoice ' : type===3 , 'btn ' : type !=3 } ">BUSINESS</a>
+                    <a (click)="getType(4) " [ngClass]="{ 'btnOfChoice ' : type===4 , 'btn ' : type !=4 } ">HABILLE</a>
+                </div>
+            </ng-container>
+
+        </div>
+        <div class="vide ">
+        </div>
+    </div>
+
+    <div class="vide2 ">
+    </div>
+    <div class="reste ">
+        <div class="groupeChoixBas">
+            <div class="form-check form-switch" id="motifs">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">MOTIFS</label>
+            </div>
+            <div class="groupeCouleurs">
+                <div class="textChoice">Les couleurs :</div>
+                <div class="couleurs ">
+                    <div class="colorBox " style="background-color: 'white' " title="blanc"></div>
+                    <div class="colorBox " style="background-color: 'black' "></div>
+                    <div class="colorBox " style="background-color: 'yellow' "></div>
+                    <div class="colorBox " style="background-color: 'red' "></div>
+                    <div class="colorBox " style="background-color: 'orange' "></div>
+                    <div class="colorBox " style="background-color: 'brown' "></div>
+                    <div class="colorBox " style="background-color: 'gray' "></div>
+                    <div class="colorBox " style="background-color: 'rgb(235, 238, 218)' "></div>
+                    <div class="colorBox " style="background-color: 'rgb(64, 87, 61)' "></div>
+                    <div class="colorBox " style="background-color: 'magenta' "></div>
+                    <div class="colorBox " style="background-color: 'violet' "></div>
+                    <div class="colorBox " style="background-color: 'pink' "></div>
+                    <div class="colorBox " style="background-color: 'cyan' "></div>
+                    <div class="colorBox " style="background-color: 'rgb(63, 199, 45)' "></div>
+                    <div class="colorBox " style="background-color: 'rgb(178, 246, 249)' "></div>
+                    <div class="colorBox " style="background-color: 'blue' "></div>
+                </div>
+            </div>
+            <ng-container *ngIf="categorie===1">
+                <select class="custom-select">
+                    <option selected>Choisir le type des manches :</option>
+                    <option value="1">COURTES</option>
+                    <option value="2">LONGUES</option>
+                    <option value="3">SANS MANCHES</option>
+                    <option value="4">ASYMETRIQUES</option>
+                    <option value="5">BRETELLES</option>
+                  </select>
+            </ng-container>
+
+            <ng-container *ngIf="categorie===3">
+                <select class="custom-select">
+                <option selected>Choisir la matière</option>
+                <option value="1">COTON</option>
+                <option value="2">DENIM</option>
+                <option value="3">MAILLE</option>
+                <option value="4">LIN</option>
+                <option value="5">LAINE</option>
+                <option value="6">CACHEMIRE</option>
+                <option value="7">VELOURS</option>
+                <option value="8">CUIR</option>
+                <option value="9">SOIE</option>
+                <option value="10">SATIN</option>
+                <option value="11">DENTELLE</option>
+                <option value="12">AUTRE</option>
+              </select>
+            </ng-container>
+        </div>
+        <button type="button" id="pageButton">ANNULER</button>
+        <button type="button" id="pageButton">SAUVEGUARDER</button>
+        <button type="button" id="pageButton">SUPPRIMER</button>
+    </div>
+    <div class=" vide2 ">
+    </div>
+    <!--Sous titre - Choix -->
+</div>
+
+<ng-container></ng-container>
