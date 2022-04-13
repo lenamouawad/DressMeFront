@@ -35,7 +35,6 @@ export class ArticlesFavorisComponent implements OnInit {
     this.initNext();
     this.initWhatToShow();
     this.initImagesToShow();
-
   }
 
   initWhatToShow(){this.whatToShow=0;}

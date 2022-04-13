@@ -18,4 +18,8 @@ export class ArticleService {
     return this.http.get<ArticleDTO[]>(`http://localhost:56189/api/article/favoris`);
   }
 
+  estFavoris(id: string, article: ArticleDTO) : Observable<ArticleDTO>{
+    return this.http.put<ArticleDTO>(`http://localhost:56189/api/article/estFavoris/${id}`, article);
+  }
+
 }
