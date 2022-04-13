@@ -12,6 +12,7 @@ import { BasService } from 'src/app/services/bas.service';
 export class BasComponent implements OnInit {
 
   @Input() bas : Bas;
+  id : string;
 
   constructor(
     private service: BasService,
@@ -19,9 +20,11 @@ export class BasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.id = this.bas.id;
   }
 
-  changeFavorites(){
+  changeFavorites = () => {
+    this.service.estFavoris(this.id, this.bas).subscribe();
     this.bas.estFavoris = !this.bas.estFavoris;
   }
 
