@@ -11,15 +11,17 @@ import { HautService } from 'src/app/services/haut.service';
 
 export class HautComponent implements OnInit {
   @Input() haut : Haut;
+  id : string;
 
   constructor(private hautService : HautService  ) { }
 
   ngOnInit(): void {
-    }
+    this.id = this.haut.id;
+  }
 
-    changeFavorites(){
-      this.haut.estFavoris = !this.haut.estFavoris;
-      /*this.hautService.estFavoris(this.haut.id);    */  
-    }
+  changeFavorites(){
+    this.hautService.estFavoris(this.id, this.haut).subscribe();
+    this.haut.estFavoris = !this.haut.estFavoris;
+  }
   
 }
