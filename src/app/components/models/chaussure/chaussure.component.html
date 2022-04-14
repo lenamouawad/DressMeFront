@@ -1,1 +1,3 @@
-<p>chaussure works!</p>
+<img class="articleImg" src={{chaussure.imgUrl}}>
+<img class="coeur" *ngIf="chaussure.estFavoris" src="./assets/images/favoris.png" (click)="changeFavorites()">
+<img class="coeur" *ngIf="!chaussure.estFavoris" src="./assets/images/pasFavoris1.png" (click)="changeFavorites()">
