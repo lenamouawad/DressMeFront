@@ -15,7 +15,7 @@ import { HautService } from 'src/app/services/haut.service';
 })
 export class AjoutArticleComponent implements OnInit {
 
-  categorie : number = 0 ;
+  categorie : number = 1 ;
   sousCategorie: number = 0;
   type : number = 0;
   matiere : number =0;
