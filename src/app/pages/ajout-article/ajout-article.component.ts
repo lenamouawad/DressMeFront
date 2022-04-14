@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjoutArticleComponent implements OnInit {
 
-  categorie : number = 0 ; 
-  sousCategorie: number = 0; 
+  categorie : number = 0 ;
+  sousCategorie: number = 0;
   type : number = 0;
   matiere : number =0;
   manches : number =0;
+  url : string = "./assets/images/emptyPhoto.png";
   constructor() { }
 
   ngOnInit(): void {
@@ -34,7 +35,7 @@ export class AjoutArticleComponent implements OnInit {
     else{
       this.categorie = 0;
     }
-    this.sousCategorie = 0;    
+    this.sousCategorie = 0;
     this.type = 0;
   }
   getSousCategorie(souscat : number){
@@ -69,4 +70,11 @@ export class AjoutArticleComponent implements OnInit {
         this.manches = 0;
       }
   }
+
+onselectFile(e){
+if (e.target.files){
+  var reader = new FileReader();
+  reader.readAsDataURL(e.target.files[0]);
+  reader.onload=(event:any)=>{this.url = event.target.result;}
+}}
 }

@@ -48,27 +48,28 @@
     <!--Fin navbar-->
     <!--Titre de la page-->
 
-    <div class="titre ">
-        <h1>Ajouter un article</h1>
+    <div class="titre">
+        <h1>Ajouter un article </h1>
     </div>
 
-    <div id="break "></div>
+    <div id="break"></div>
 
     <!-- Photo et informations de l'article ajouté -->
     <div class="photoInformation">
-        <div class="vide ">
+        <div class="vide">
         </div>
         <div class="uploadPhoto">
-            <img class="photoUpload ">
-            <div class="parcourir ">
-                <img title="Parcourir " class="addButton " src="./assets/images/add2.png "></div>
-            <div class="textButton"> Hello</div>
+            <img [src]="url" class="photoUpload">
+            <div class="parcourir">
+                <label for="fileInput"><img src="./assets/images/add2.png "  title="Parcourir" class="addButton"></label>
+                <input type="file" id="fileInput" (change)="onselectFile($event) ">
+            </div>
         </div>
         <!-- Choisir si haut, bas chaussure ou accessoire-->
         <div class="choix ">
-            <div class=" textChoice">
+            <div class=" textChoice ">
             </div>
-            <div class="textChoice">
+            <div class="textChoice ">
                 <p>Il s' agit d 'un(e) : </p>
             </div>
             <div class="lesbuttons ">
@@ -156,7 +157,7 @@
 
             <!-- Si les choix categories et  sous-catégories sont fais-->
             <ng-container *ngIf="(sousCategorie!==0)&&(categorie !==0 ) ">
-                <div class="textChoice ">
+                <div class="textChoice">
                     <p>Ca correspond plutot à quel type ?</p>
                 </div>
                 <div class="lesbuttons ">
@@ -234,8 +235,8 @@
             </div>
 
         </div>
-        <button type="button" id='pageButton'>ANNULER</button>
-        <button type="button" id='pageButton'>SAUVEGARDER</button>
+        <button type="button " id='pageButton'>ANNULER</button>
+        <button type="button " id='pageButton'>SAUVEGARDER</button>
     </div>
     <div class=" vide2 ">
     </div>
