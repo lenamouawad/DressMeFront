@@ -149,7 +149,7 @@
     </ng-container>
 
     <!-- Tenue proposée -->
-    <ng-container *ngIf="next===4  ">
+    <ng-container *ngIf="next===4 && tenue!=null">
         <div class="photoSpace2 ">
             <app-haut class=" photoArticle " [haut]="tenue.haut"></app-haut>
             <app-bas class=" photoArticleRight " [bas]="tenue.bas"></app-bas>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Meteo } from 'src/app/models/meteo';
 import { Tenue } from 'src/app/models/tenue';
+import { MeteoService } from 'src/app/services/meteo.service';
 import { TenueService } from 'src/app/services/tenue.service';
 
 @Component({
@@ -19,10 +21,16 @@ export class MaTenueComponent implements OnInit {
   tenueTypeToPass : string;
   jour : number;
   periode : number;
-
+  meteo: Meteo;
+  summary: string;
+  temp: number;
   tenue : Tenue;
 
-  constructor(public router : Router, private tenueService : TenueService) { 
+  constructor(
+    public router : Router, 
+    private tenueService : TenueService,
+    private meteoService: MeteoService
+    ) { 
     this.router = router;
   }
 
@@ -66,8 +74,11 @@ export class MaTenueComponent implements OnInit {
   }
 
   clickArrowRight(){
+
       this.next = 4;
-      this.initTenue();
+      this.getMeteo("Paris");
+      //this.initTenue();
+
   }
 
   initTenue(){
@@ -89,9 +100,26 @@ export class MaTenueComponent implements OnInit {
         this.tenueTypeToPass = "soiree";
         break;
    }
-    this.tenueService.ProposerTenue("frais",this.tenueTypeToPass).subscribe(data => {this.tenue = data;});
+    this.tenueService.ProposerTenue(this.summary, this.tenueTypeToPass).subscribe(data => {this.tenue = data;});
     
   }
 
+  getMeteo(city: string){
+    this.meteoService.findMeteoByCity(city).subscribe(data => {
+      this.meteo = data;
+      this.initSummary();
+    });
+  }
+
+  initSummary(){
+    console.log(this.meteo);
+    this.temp = parseInt(this.meteo.temp);
+    if(this.temp < 5) this.summary = 'froid';
+    else if(this.temp >= 5 && this.temp < 15) this.summary = 'frais';
+    else if(this.temp >= 15 && this.temp < 25) this.summary = 'bon';
+    else this.summary = 'chaud';
+
+    this.initTenue();
+  }
 
 }

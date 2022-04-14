@@ -24,6 +24,9 @@ export class BasComponent implements OnInit {
   }
 
   changeFavorites = () => {
+    let geo = navigator.geolocation;
+    console.log(geo);
+    
     this.service.estFavoris(this.id, this.bas).subscribe();
     this.bas.estFavoris = !this.bas.estFavoris;
   }
