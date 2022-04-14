@@ -16,23 +16,23 @@ export class ChaussureService {
   constructor(private http: HttpClient) { }
 
   findAll() : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure`);
+    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussures`);
   }
 
   findById(id: string) : Observable<Chaussure>{
-    return this.http.get<Chaussure>(`http://localhost:56189/api/chaussure/${id}`);
+    return this.http.get<Chaussure>(`http://localhost:56189/api/chaussures/${id}`);
   }
 
   findByMatiere(matiere: Matiere) : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/matiere/${matiere}`);
+    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussures/matiere/${matiere}`);
   }
 
   findByMotif(motif: Motifs) : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/motif/${motif}`);
+    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussures/motif/${motif}`);
   }
 
   findByType(type: Types) : Observable<Chaussure[]>{
-    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussure/type/${type}`);
+    return this.http.get<Chaussure[]>(`http://localhost:56189/api/chaussures/type/${type}`);
   }
 
   findByCategorie(categorie: CategorieChaussure) : Observable<Chaussure[]>{

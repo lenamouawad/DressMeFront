@@ -3,8 +3,8 @@
         <!-- Three lines menu-->
         <!-- Liste icones-->
         <div class="card ">
-            <ul class="list-group list-group-horizontal-md" routerLink="">
-                <li class="list-group-item">
+            <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item" routerLink="">
                     <img class="icone" src="./assets/icons/acceuilIcon.png " />
                     <a class="links">
                        ACCEUIL
@@ -87,12 +87,9 @@
     <div id="break "></div>
     <!--3rd row-->
     <div class="colvide2">
-        <!--<img *ngIf="showArrows() " class="flechesLeft" (click)="clickArrowLeft()" src="./assets/images/fleches.gif " />
-        -->
         <img *ngIf="showArrowLeft() " class="flechesLeft " src="./assets/images/flecheTenue.png " (click)="clickArrowLeft()" />
-
     </div>
-    <!--Si  on clique sur hauts -->
+    <!--Si  on clique sur tout -->
     <ng-container *ngIf="whatToShow==0 ">
         <ng-container *ngIf="articlesToShow.length!=8">
             <div class="photoSpaceLessThan8 ">
@@ -111,6 +108,7 @@
             </div>
         </ng-container>
     </ng-container>
+    <!--Si on clique sur haut-->
     <ng-container *ngIf="whatToShow==1 ">
         <ng-container *ngIf="hautsToShow.length!=8">
             <div class="photoSpaceLessThan8 ">
@@ -129,6 +127,7 @@
             </div>
         </ng-container>
     </ng-container>
+    <!--Si on clique sur bas -->
     <ng-container *ngIf="whatToShow==2 ">
         <ng-container *ngIf="basToShow.length!=8">
             <div class="photoSpaceLessThan8 ">
@@ -147,7 +146,26 @@
             </div>
         </ng-container>
     </ng-container>
-    <!--Si on clique sur tout ?-->
+    <!--Si on clique sur chaussures
+    <ng-container *ngIf="whatToShow==3 ">
+        <ng-container *ngIf="chaussuresToShow.length!=8">
+            <div class="photoSpaceLessThan8 ">
+                <ng-container *ngFor="let chaus of chaussuresToShow ; let i=index ">
+                    <app-chaussure class="appArticle" [chaussure]="chaus" *ngIf="i!=3 && i!=7 && i != chaussuresToShow.length -1"></app-chaussure>
+                    <app-chaussure class="appArticleRight" [chaussure]="chaus" *ngIf="i===3 || i===7 || i=== chaussuresToShow.length -1"></app-chaussure>
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="chaussuresToShow.length ==8">
+            <div class="photoSpace ">
+                <ng-container *ngFor="let chaus of chaussuresToShow ; let i=index ">
+                    <app-chaussure class=" appArticle " [chaussure]="chaus" *ngIf="i!=3 && i!=7 && i != chaussuresToShow.length -1"></app-chaussure>
+                    <app-chaussure class=" appArticleRight " [chaussure]="chaus" *ngIf="i===3 || i===7 || i=== chaussuresToShow.length -1"></app-chaussure>
+                </ng-container>
+            </div>
+        </ng-container>
+    </ng-container> -->
+    <!--Afficher plus-->
     <div class="colvide2 "><img *ngIf="showArrowRight() " class="flechesRight" (click)="clickArrowRight()" src="./assets/images/flecheTenue.png " /></div>
     <div id="break "></div>
     <div class="emptyrowBottom"> </div>

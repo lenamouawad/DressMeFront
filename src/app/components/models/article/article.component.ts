@@ -20,8 +20,6 @@ export class ArticleComponent implements OnInit {
   changeFavorites(){
     this.articleService.estFavoris(this.article.idInCategory, this.article).subscribe();
     this.article.estFavoris = !this.article.estFavoris;
-
-    /*this.articleService.estFavoris(this.article.id);*/
   }
 
 }
