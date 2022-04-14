@@ -8,9 +8,13 @@ import { RouterModule } from '@angular/router';
 })
 export class PageAcceuilComponent implements OnInit {
 
+  displaySettings : boolean = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  settings(){
+    this.displaySettings = true;
+  }
 }
