@@ -67,123 +67,9 @@
         </div>
         <!-- Choisir si haut, bas chaussure ou accessoire-->
         <div class="choix ">
-            <div class=" textChoice ">
-            </div>
-            <div class="textChoice ">
-                <p>Il s' agit d 'un(e) : </p>
-            </div>
-            <div class="lesbuttons ">
-                <div id="break "></div>
-                <a (click)="getCategorie(1) " [ngClass]="{ 'btnOfChoice ' : categorie===1 , 'btn ' : categorie !=1 } ">HAUTS</a>
-                <a (click)="getCategorie(2) " [ngClass]="{ 'btnOfChoice ' : categorie===2 , 'btn ' : categorie !=2 } ">VESTES</a>
-                <a (click)="getCategorie(3) " [ngClass]="{ 'btnOfChoice ' : categorie===3 , 'btn ' : categorie !=3 } ">BAS</a>
-                <a (click)="getCategorie(4) " [ngClass]="{ 'btnOfChoice ' : categorie===4 , 'btn ' : categorie !=4 } ">CHAUSSURES</a>
-                <a (click)="getCategorie(5) " [ngClass]="{ 'btnOfChoice ' : categorie===5 , 'btn ' : categorie !=5 } ">ACCESSOIRES</a>
-            </div>
 
-            <!-- Si haut afficher les sous-catégories hauts-->
-            <ng-container *ngIf="categorie===1 ">
-                <div class="textChoice ">
-                    <p>C'est plutot un(e) ... ?</p>
-                </div>
-                <div class=" lesbuttons ">
-                    <div id="break "></div>
-                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } " style="width:10% ">ROBE </a>
-                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">TSHIRT</a>
-                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } " style="width:10% ">TOP</a>
-                    <a (click)="getSousCategorie(6) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===6 , 'btn ' : sousCategorie !=6 } ">CHEMISE</a>
-                    <a (click)="getSousCategorie(7) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===7 , 'btn ' : sousCategorie !=7 } ">BLOUSE</a>
-                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } " style="width:10% ">PULL</a>
-                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SWEAT</a>
-                </div>
-            </ng-container>
-            <!-- Si veste afficher les sous-catégories veste-->
-            <ng-container *ngIf="categorie===2 ">
-                <div class="textChoice ">
-                    <p>C'est plutot un(e) ... ?</p>
-                </div>
-                <div class="lesbuttons ">
-                    <div id="break "></div>
-                    <a (click)="getSousCategorie(8) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===8 , 'btn ' : sousCategorie !=8 } ">GILET</a>
-                    <a (click)="getSousCategorie(9) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===9 , 'btn ' : sousCategorie !=9 } ">VESTE</a>
-                    <a (click)="getSousCategorie(10) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===10 , 'btn ' : sousCategorie !=10 } ">BLAZER</a>
-                    <a (click)="getSousCategorie(11) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===11 , 'btn ' : sousCategorie !=11 } ">MANTEAU</a>
-                    <a (click)="getSousCategorie(12) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===12 , 'btn ' : sousCategorie !=12 } ">DOUDOUNE</a>
-                    <a (click)="getSousCategorie(13) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===13 , 'btn ' : sousCategorie !=13 } ">TRENCH</a>
-                </div>
-            </ng-container>
-            <!-- Si bas afficher les sous-catégories bas-->
-            <ng-container *ngIf="categorie===3 ">
-                <div class="textChoice ">
-                    <p>C'est plutot un(e) ... ?</p>
-                </div>
-                <div class="lesbuttons ">
-                    <div id="break "></div>
-                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SHORT</a>
-                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MINIJUPE</a>
-                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">JUPE</a>
-                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">JEANS</a>
-                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1, 'btn ' : sousCategorie !=1 } ">PANTALON</a>
-                </div>
-            </ng-container>
-            <!-- Si chaussures afficher les sous-catégories chaussures-->
-            <ng-container *ngIf="categorie===4 ">
-                <div class="textChoice ">
-                    <p>C'est plutot un(e) ... ?</p>
-                </div>
-                <div class="lesbuttons ">
-                    <div id="break "></div>
-                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } ">ESCARPIN</a>
-                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice' : sousCategorie===3, 'btn ' : sousCategorie !=3 } ">SANDALE</a>
-                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">BASKET</a>
-                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">BOTTE</a>
-                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MOCASSIN</a>
-                </div>
-            </ng-container>
-            <!-- Si accessoires afficher les sous-catégories accessoires-->
-            <ng-container *ngIf="categorie===5 ">
-                <div class="textChoice ">
-                    <p>C'est plutot un(e) ... ?</p>
-                </div>
-                <div class="lesbuttons ">
-                    <div id="break "></div>
-                    <a class="btn ">BIJOUX</a>
-                    <a class="btn ">LUNETTES</a>
-                    <a class="btn ">SAC</a>
-                    <a class="btn ">FOULARD</a>
-                    <a class="btn ">CEINTURE</a>
-                </div>
-            </ng-container>
-
-            <!-- Si les choix categories et  sous-catégories sont fais-->
-            <ng-container *ngIf="(sousCategorie!==0)&&(categorie !==0 ) ">
-                <div class="textChoice">
-                    <p>Ca correspond plutot à quel type ?</p>
-                </div>
-                <div class="lesbuttons ">
-                    <div id="break "></div>
-                    <a (click)="getType(1) " [ngClass]="{ 'btnOfChoice ' : type===1 , 'btn ' : type !=1 } ">CASUAL </a>
-                    <a (click)="getType(2) " [ngClass]="{ 'btnOfChoice ' : type===2 , 'btn ' : type !=2 } ">SPORT</a>
-                    <a (click)="getType(3) " [ngClass]="{ 'btnOfChoice ' : type===3 , 'btn ' : type !=3 } ">BUSINESS</a>
-                    <a (click)="getType(4) " [ngClass]="{ 'btnOfChoice ' : type===4 , 'btn ' : type !=4 } ">HABILLE</a>
-                </div>
-            </ng-container>
-
-        </div>
-        <div class="vide ">
-        </div>
-    </div>
-
-    <div class="vide2 ">
-    </div>
-    <div class='reste'>
-        <div class='groupeChoixBas'>
-            <div class="form-check form-switch " id="motifs ">
-                <input class="form-check-input " type="checkbox " id="flexSwitchCheckDefault ">
-                <label class="form-check-label " for="flexSwitchCheckDefault ">MOTIFS</label>
-            </div>
             <div class='groupeCouleurs '>
-                <div class="textChoice " style="height:40%; padding-top: 5%; font-size: 15px; ">COULEURS :</div>
+                <div class="textChoice " style="height:40%;  font-size: 15px; margin-top: 0; ">COULEURS :</div>
                 <div class="couleurs ">
                     <div class="colorBox " style="background-color: ' white ' " title="blanc "></div>
                     <div class="colorBox " style="background-color: 'rgb(235, 238, 218) ' " title="beige "></div>
@@ -204,43 +90,151 @@
                     <div class="colorBox " style="background-color: 'blue ' " title="bleu "></div>
                 </div>
             </div>
-            <div class="selector ">
-                <ng-container *ngIf="categorie===1 ">
-                    <select class="custom-select ">
-                    <option selected>TYPE DE MANCHES </option>
-                    <option value="1 ">COURTES</option>
-                    <option value="2 ">LONGUES</option>
-                    <option value="3 ">SANS MANCHES</option>
-                    <option value="4 ">ASYMETRIQUES</option>
-                    <option value="5 ">BRETELLES</option>
-                  </select>
-                </ng-container>
-                <ng-container *ngIf="categorie===3 ">
-                    <select class="custom-select ">
-                <option selected>MATIERE</option>
-                <option value="1 ">COTON</option>
-                <option value="2 ">DENIM</option>
-                <option value="3 ">MAILLE</option>
-                <option value="4 ">LIN</option>
-                <option value="5 ">LAINE</option>
-                <option value="6 ">CACHEMIRE</option>
-                <option value="7 ">VELOURS</option>
-                <option value="8 ">CUIR</option>
-                <option value="9 ">SOIE</option>
-                <option value="10 ">SATIN</option>
-                <option value="11 ">DENTELLE</option>
-                <option value="12 ">AUTRE</option>
-              </select>
-                </ng-container>
+            <div class="motifsEtSelector">
+                <div class="form-check form-switch " id="motifs ">
+                    <input class="form-check-input " type="checkbox " id="flexSwitchCheckDefault ">
+                    <label class="form-check-label " for="flexSwitchCheckDefault ">MOTIFS</label>
+                </div>
+                <div class="selector">
+                    <ng-container *ngIf="categorie===1 ">
+                        <select class="custom-select ">
+                         <option selected>TYPE DE MANCHES </option>
+                         <option value="1 ">COURTES</option>
+                         <option value="2 ">LONGUES</option>
+                            <option value="3 ">SANS MANCHES</option>
+                            <option value="4 ">ASYMETRIQUES</option>
+                            <option value="5 ">BRETELLES</option>
+                        </select>
+                    </ng-container>
+                    <ng-container *ngIf="categorie===3 ">
+                        <select class="custom-select ">
+                        <option selected>MATIERE</option>
+                        <option value="1 ">COTON</option>
+                        <option value="2 ">DENIM</option>
+                        <option value="3 ">MAILLE</option>
+                        <option value="4 ">LIN</option>
+                        <option value="5 ">LAINE</option>
+                        <option value="6 ">CACHEMIRE</option>
+                        <option value="7 ">VELOURS</option>
+                        <option value="8 ">CUIR</option>
+                        <option value="9 ">SOIE</option>
+                        <option value="10 ">SATIN</option>
+                        <option value="11 ">DENTELLE</option>
+                        <option value="12 ">AUTRE</option>
+                        </select>
+                    </ng-container>
+                </div>
             </div>
+            <div class="textChoice" style="height:7%;">
+                <p>CATEGORIE : </p>
+            </div>
+            <div class=" lesbuttons ">
+                <div id="break "></div>
+                <a (click)="getCategorie(1) " [ngClass]="{ 'btnOfChoice ' : categorie===1 , 'btn ' : categorie !=1 } ">HAUTS</a>
+                <a (click)="getCategorie(2) " [ngClass]="{ 'btnOfChoice ' : categorie===2 , 'btn ' : categorie !=2 } ">VESTES</a>
+                <a (click)="getCategorie(3) " [ngClass]="{ 'btnOfChoice ' : categorie===3 , 'btn ' : categorie !=3 } ">BAS</a>
+                <a (click)="getCategorie(4) " [ngClass]="{ 'btnOfChoice ' : categorie===4 , 'btn ' : categorie !=4 } ">CHAUSSURES</a>
+                <a (click)="getCategorie(5) " [ngClass]="{ 'btnOfChoice ' : categorie===5 , 'btn ' : categorie !=5 } ">ACCESSOIRES</a>
+            </div>
+            <ng-container *ngIf="categorie===1 ">
+                <div class="textChoice" style="height:7%;">
+                    <p>SOUS-CATEGORIE :</p>
+                </div>
+                <div class=" lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } " style="width:10% ">ROBE </a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">TSHIRT</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } " style="width:10% ">TOP</a>
+                    <a (click)="getSousCategorie(6) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===6 , 'btn ' : sousCategorie !=6 } ">CHEMISE</a>
+                    <a (click)="getSousCategorie(7) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===7 , 'btn ' : sousCategorie !=7 } ">BLOUSE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } " style="width:10% ">PULL</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SWEAT</a>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="categorie===2 ">
+                <div class="textChoice" style="height:7%;">
+                    <p>SOUS-CATEGORIE</p>
+                </div>
+                <div class=" lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getSousCategorie(8) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===8 , 'btn ' : sousCategorie !=8 } ">GILET</a>
+                    <a (click)="getSousCategorie(9) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===9 , 'btn ' : sousCategorie !=9 } ">VESTE</a>
+                    <a (click)="getSousCategorie(10) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===10 , 'btn ' : sousCategorie !=10 } ">BLAZER</a>
+                    <a (click)="getSousCategorie(11) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===11 , 'btn ' : sousCategorie !=11 } ">MANTEAU</a>
+                    <a (click)="getSousCategorie(12) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===12 , 'btn ' : sousCategorie !=12 } ">DOUDOUNE</a>
+                    <a (click)="getSousCategorie(13) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===13 , 'btn ' : sousCategorie !=13 } ">TRENCH</a>
+                </div>
+            </ng-container>
+            <!-- Si bas afficher les sous-catégories bas-->
+
+            <ng-container *ngIf="categorie===3 ">
+                <div class="textChoice" style="height:7%;">
+                    <p>SOUS-CATEGORIE</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SHORT</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MINIJUPE</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">JUPE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">JEANS</a>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1, 'btn ' : sousCategorie !=1 } ">PANTALON</a>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="categorie===4 ">
+                <div class="textChoice" style="height:7%;">
+                    <p>SOUS-CATEGORIE</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } ">ESCARPIN</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice' : sousCategorie===3, 'btn ' : sousCategorie !=3 } ">SANDALE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">BASKET</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">BOTTE</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MOCASSIN</a>
+                </div>
+            </ng-container>
+            <!-- Si accessoires afficher les sous-catégories accessoires-->
+            <ng-container *ngIf="categorie===5 ">
+                <div class="textChoice" style="height:7%;">
+                    <p>SOUS-CATEGORIE</p>
+                </div>
+                <div class="lesbuttons ">
+                    <div id="break "></div>
+                    <a class="btn ">BIJOUX</a>
+                    <a class="btn ">LUNETTES</a>
+                    <a class="btn ">SAC</a>
+                    <a class="btn ">FOULARD</a>
+                    <a class="btn ">CEINTURE</a>
+                </div>
+            </ng-container>
+            <!-- Si les choix categories et  sous-catégories sont fais-->
+
+            <ng-container *ngIf="(sousCategorie!==0)&&(categorie !==0 ) ">
+                <div class="textChoice" style="height:7%;">
+                    <p>TYPE</p>
+                </div>
+                <div class="lesbuttons">
+                    <div id="break "></div>
+                    <a (click)="getType(1) " [ngClass]="{ 'btnOfChoice ' : type===1 , 'btn ' : type !=1 } ">CASUAL </a>
+                    <a (click)="getType(2) " [ngClass]="{ 'btnOfChoice ' : type===2 , 'btn ' : type !=2 } ">SPORT</a>
+                    <a (click)="getType(3) " [ngClass]="{ 'btnOfChoice ' : type===3 , 'btn ' : type !=3 } ">BUSINESS</a>
+                    <a (click)="getType(4) " [ngClass]="{ 'btnOfChoice ' : type===4 , 'btn ' : type !=4 } ">HABILLE</a>
+                </div>
+            </ng-container>
 
         </div>
+        <div class="vide ">
+        </div>
+    </div>
+
+    <div class="vide2 ">
+    </div>
+    <div class='reste'>
+        <div class='groupeChoixBas'>
+        </div>
         <button type="button " id='pageButton'>ANNULER</button>
-        <button type="button " id='pageButton'>SAUVEGARDER</button>
+        <button type="button " id='pageButton' (click)="addItem() ">SAUVEGARDER</button>
     </div>
     <div class=" vide2 ">
     </div>
-    <!--Sous titre - Choix -->
 </div>
-
-<ng-container></ng-container>
