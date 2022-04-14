@@ -1,10 +1,8 @@
 <div class="containers">
-
     <!--Navbar-->
     <div class="emptyrow">
         <!-- Three lines menu-->
         <!-- Liste icones-->
-        <!--
         <div class="card ">
             <ul class="list-group list-group-horizontal-md" routerLink="">
                 <li class="list-group-item">
@@ -36,7 +34,6 @@
             </ul>
         </div>
         <!-- Icones settings et deconnexion-->
-        <!--
         <div class="rightIcons">
             <a routerLink="monCompte">
                 <img class="iconeHeader" src="./assets/icons/SettingsHeader.png " />
@@ -44,35 +41,34 @@
             <a routerLink="parametres">
                 <img class="iconeHeader" src="./assets/icons/Login.png " />
             </a>
-        </div>-->
+        </div>
     </div>
-
     <div class="colvide">
     </div>
     <!--Fin navbar-->
     <!--Titre de la page-->
 
-    <div class="titre">
-        <h1>Ajouter un article {{categorie}} {{sousCategorie}} {{type}}</h1>
+    <div class="titre ">
+        <h1>Ajouter un article</h1>
     </div>
 
-    <div id="break"></div>
+    <div id="break "></div>
 
     <!-- Photo et informations de l'article ajouté -->
     <div class="photoInformation">
-        <div class="vide">
+        <div class="vide ">
         </div>
-        <div class="uploadPhoto ">
-            <img class="photoUpload">
+        <div class="uploadPhoto">
+            <img class="photoUpload ">
             <div class="parcourir ">
-                <img title="Parcourir" class="addButton" src="./assets/images/add2.png "></div>
-            <div class="textButton "> Hello</div>
+                <img title="Parcourir " class="addButton " src="./assets/images/add2.png "></div>
+            <div class="textButton"> Hello</div>
         </div>
         <!-- Choisir si haut, bas chaussure ou accessoire-->
         <div class="choix ">
-            <div class=" textChoice ">
+            <div class=" textChoice">
             </div>
-            <div class="textChoice ">
+            <div class="textChoice">
                 <p>Il s' agit d 'un(e) : </p>
             </div>
             <div class="lesbuttons ">
@@ -92,12 +88,12 @@
                 <div class=" lesbuttons ">
                     <div id="break "></div>
                     <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } " style="width:10% ">ROBE </a>
-                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">TSHIRT</a>
-                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } " style="width:10% ">TOP</a>
-                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">CHEMISE</a>
-                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">BLOUSE</a>
-                    <a (click)="getSousCategorie(6) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===6 , 'btn ' : sousCategorie !=6 } " style="width:10% ">PULL</a>
-                    <a (click)="getSousCategorie(7) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===7 , 'btn ' : sousCategorie !=7 } ">SWEAT</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">TSHIRT</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } " style="width:10% ">TOP</a>
+                    <a (click)="getSousCategorie(6) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===6 , 'btn ' : sousCategorie !=6 } ">CHEMISE</a>
+                    <a (click)="getSousCategorie(7) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===7 , 'btn ' : sousCategorie !=7 } ">BLOUSE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } " style="width:10% ">PULL</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SWEAT</a>
                 </div>
             </ng-container>
             <!-- Si veste afficher les sous-catégories veste-->
@@ -107,12 +103,12 @@
                 </div>
                 <div class="lesbuttons ">
                     <div id="break "></div>
-                    <a class="btn ">GILET</a>
-                    <a class="btn ">VESTE</a>
-                    <a class="btn ">BLAZER</a>
-                    <a class="btn ">MANTEAU</a>
-                    <a class="btn ">DOUDOUNE</a>
-                    <a class="btn ">TRENCH</a>
+                    <a (click)="getSousCategorie(8) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===8 , 'btn ' : sousCategorie !=8 } ">GILET</a>
+                    <a (click)="getSousCategorie(9) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===9 , 'btn ' : sousCategorie !=9 } ">VESTE</a>
+                    <a (click)="getSousCategorie(10) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===10 , 'btn ' : sousCategorie !=10 } ">BLAZER</a>
+                    <a (click)="getSousCategorie(11) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===11 , 'btn ' : sousCategorie !=11 } ">MANTEAU</a>
+                    <a (click)="getSousCategorie(12) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===12 , 'btn ' : sousCategorie !=12 } ">DOUDOUNE</a>
+                    <a (click)="getSousCategorie(13) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===13 , 'btn ' : sousCategorie !=13 } ">TRENCH</a>
                 </div>
             </ng-container>
             <!-- Si bas afficher les sous-catégories bas-->
@@ -122,11 +118,11 @@
                 </div>
                 <div class="lesbuttons ">
                     <div id="break "></div>
-                    <a class="btn ">SHORT</a>
-                    <a class="btn ">MINIJUPE</a>
-                    <a class="btn ">JUPE</a>
-                    <a class="btn ">JEANS</a>
-                    <a class="btn ">PANTALON</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===3 , 'btn ' : sousCategorie !=3 } ">SHORT</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MINIJUPE</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">JUPE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">JEANS</a>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===1, 'btn ' : sousCategorie !=1 } ">PANTALON</a>
                 </div>
             </ng-container>
             <!-- Si chaussures afficher les sous-catégories chaussures-->
@@ -136,11 +132,11 @@
                 </div>
                 <div class="lesbuttons ">
                     <div id="break "></div>
-                    <a class="btn ">ESCARPIN</a>
-                    <a class="btn ">SANDALE</a>
-                    <a class="btn ">BASKET</a>
-                    <a class="btn ">BOTTE</a>
-                    <a class="btn ">MOCASSIN</a>
+                    <a (click)="getSousCategorie(1) " [ngClass]="{ 'btnOfChoice' : sousCategorie===1 , 'btn ' : sousCategorie !=1 } ">ESCARPIN</a>
+                    <a (click)="getSousCategorie(3) " [ngClass]="{ 'btnOfChoice' : sousCategorie===3, 'btn ' : sousCategorie !=3 } ">SANDALE</a>
+                    <a (click)="getSousCategorie(2) " [ngClass]="{ 'btnOfChoice' : sousCategorie===2 , 'btn ' : sousCategorie !=2 } ">BASKET</a>
+                    <a (click)="getSousCategorie(4) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===4 , 'btn ' : sousCategorie !=4 } ">BOTTE</a>
+                    <a (click)="getSousCategorie(5) " [ngClass]="{ 'btnOfChoice ' : sousCategorie===5 , 'btn ' : sousCategorie !=5 } ">MOCASSIN</a>
                 </div>
             </ng-container>
             <!-- Si accessoires afficher les sous-catégories accessoires-->
@@ -179,65 +175,67 @@
 
     <div class="vide2 ">
     </div>
-    <div class="reste ">
-        <div class="groupeChoixBas">
-            <div class="form-check form-switch" id="motifs">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">MOTIFS</label>
+    <div class='reste'>
+        <div class='groupeChoixBas'>
+            <div class="form-check form-switch " id="motifs ">
+                <input class="form-check-input " type="checkbox " id="flexSwitchCheckDefault ">
+                <label class="form-check-label " for="flexSwitchCheckDefault ">MOTIFS</label>
             </div>
-            <div class="groupeCouleurs">
-                <div class="textChoice">Les couleurs :</div>
+            <div class='groupeCouleurs '>
+                <div class="textChoice " style="height:40%; padding-top: 5%; font-size: 15px; ">COULEURS :</div>
                 <div class="couleurs ">
-                    <div class="colorBox " style="background-color: 'white' " title="blanc"></div>
-                    <div class="colorBox " style="background-color: 'black' "></div>
-                    <div class="colorBox " style="background-color: 'yellow' "></div>
-                    <div class="colorBox " style="background-color: 'red' "></div>
-                    <div class="colorBox " style="background-color: 'orange' "></div>
-                    <div class="colorBox " style="background-color: 'brown' "></div>
-                    <div class="colorBox " style="background-color: 'gray' "></div>
-                    <div class="colorBox " style="background-color: 'rgb(235, 238, 218)' "></div>
-                    <div class="colorBox " style="background-color: 'rgb(64, 87, 61)' "></div>
-                    <div class="colorBox " style="background-color: 'magenta' "></div>
-                    <div class="colorBox " style="background-color: 'violet' "></div>
-                    <div class="colorBox " style="background-color: 'pink' "></div>
-                    <div class="colorBox " style="background-color: 'cyan' "></div>
-                    <div class="colorBox " style="background-color: 'rgb(63, 199, 45)' "></div>
-                    <div class="colorBox " style="background-color: 'rgb(178, 246, 249)' "></div>
-                    <div class="colorBox " style="background-color: 'blue' "></div>
+                    <div class="colorBox " style="background-color: ' white ' " title="blanc "></div>
+                    <div class="colorBox " style="background-color: 'rgb(235, 238, 218) ' " title="beige "></div>
+                    <div class="colorBox " style="background-color: 'black ' " title="noir "></div>
+                    <div class="colorBox " style="background-color: 'gray ' " title="gris "></div>
+                    <div class="colorBox " style="background-color: 'yellow ' " title="jaune "></div>
+                    <div class="colorBox " style="background-color: 'orange ' " title="orange "></div>
+                    <div class="colorBox " style="background-color: 'red ' " title="rouge "></div>
+                    <div class="colorBox " style="background-color: 'brown ' " title="bordeaux "></div>
+                    <div class="colorBox " style="background-color: rgb(137, 102, 52) " title="marron "></div>
+                    <div class="colorBox " style="background-color: 'magenta ' " title="magenta "></div>
+                    <div class="colorBox " style="background-color: 'violet ' " title="violet "></div>
+                    <div class="colorBox " style="background-color: 'pink ' " title="rose "></div>
+                    <div class="colorBox " style="background-color: 'rgb(64, 87, 61) ' " title="kaki "></div>
+                    <div class="colorBox " style="background-color: 'rgb(63, 199, 45) ' " title="vert "></div>
+                    <div class="colorBox " style="background-color: 'rgb(178, 246, 249) ' " title="denim "></div>
+                    <div class="colorBox " style="background-color: 'cyan ' " title="turquoise "> </div>
+                    <div class="colorBox " style="background-color: 'blue ' " title="bleu "></div>
                 </div>
             </div>
-            <ng-container *ngIf="categorie===1">
-                <select class="custom-select">
-                    <option selected>Choisir le type des manches :</option>
-                    <option value="1">COURTES</option>
-                    <option value="2">LONGUES</option>
-                    <option value="3">SANS MANCHES</option>
-                    <option value="4">ASYMETRIQUES</option>
-                    <option value="5">BRETELLES</option>
+            <div class="selector ">
+                <ng-container *ngIf="categorie===1 ">
+                    <select class="custom-select ">
+                    <option selected>TYPE DE MANCHES </option>
+                    <option value="1 ">COURTES</option>
+                    <option value="2 ">LONGUES</option>
+                    <option value="3 ">SANS MANCHES</option>
+                    <option value="4 ">ASYMETRIQUES</option>
+                    <option value="5 ">BRETELLES</option>
                   </select>
-            </ng-container>
-
-            <ng-container *ngIf="categorie===3">
-                <select class="custom-select">
-                <option selected>Choisir la matière</option>
-                <option value="1">COTON</option>
-                <option value="2">DENIM</option>
-                <option value="3">MAILLE</option>
-                <option value="4">LIN</option>
-                <option value="5">LAINE</option>
-                <option value="6">CACHEMIRE</option>
-                <option value="7">VELOURS</option>
-                <option value="8">CUIR</option>
-                <option value="9">SOIE</option>
-                <option value="10">SATIN</option>
-                <option value="11">DENTELLE</option>
-                <option value="12">AUTRE</option>
+                </ng-container>
+                <ng-container *ngIf="categorie===3 ">
+                    <select class="custom-select ">
+                <option selected>MATIERE</option>
+                <option value="1 ">COTON</option>
+                <option value="2 ">DENIM</option>
+                <option value="3 ">MAILLE</option>
+                <option value="4 ">LIN</option>
+                <option value="5 ">LAINE</option>
+                <option value="6 ">CACHEMIRE</option>
+                <option value="7 ">VELOURS</option>
+                <option value="8 ">CUIR</option>
+                <option value="9 ">SOIE</option>
+                <option value="10 ">SATIN</option>
+                <option value="11 ">DENTELLE</option>
+                <option value="12 ">AUTRE</option>
               </select>
-            </ng-container>
+                </ng-container>
+            </div>
+
         </div>
-        <button type="button" id="pageButton">ANNULER</button>
-        <button type="button" id="pageButton">SAUVEGUARDER</button>
-        <button type="button" id="pageButton">SUPPRIMER</button>
+        <button type="button" id='pageButton'>ANNULER</button>
+        <button type="button" id='pageButton'>SAUVEGARDER</button>
     </div>
     <div class=" vide2 ">
     </div>
