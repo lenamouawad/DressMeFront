@@ -151,35 +151,22 @@
     <!-- Tenue proposée -->
     <ng-container *ngIf="next===4 && tenue!=null">
         <div class="photoSpace2 ">
-            <app-haut class=" photoArticle " [haut]="tenue.haut"></app-haut>
-            <app-bas class=" photoArticleRight " [bas]="tenue.bas"></app-bas>
+            <app-haut class="photoArticle " [haut]="tenue.haut"></app-haut>
+            <app-bas class="photoArticleRight " [bas]="tenue.bas"></app-bas>
             <div id="break"></div>
-            <app-haut class=" photoArticle " [haut]="tenue.veste"></app-haut>
-            <app-bas class=" photoArticleRight "></app-bas>
+            <app-haut class="photoArticle" [haut]="tenue.veste"></app-haut>
+            <app-bas class="photoArticleRight"></app-bas>
         </div>
     </ng-container>
 
     <div class="colAroundPhotospace2 ">
-        <!--<img *ngIf="showArrowRight " class="flecheRight " src="./assets/images/flecheTenue.png " (click)=" router.navigate([ '/tenueProposee'])" />-->
         <img *ngIf="next == 3" class="flecheRight " src="./assets/images/flecheTenue.png " (click)="clickArrowRight()" />
         <div class="rightBox" *ngIf="next === 4 ">
             <img class="magicWand " src="./assets/images/dressMe.png " (click)="initTenue()" />
-            <a class="autrePopositionText" (click)=" initTenue() ">AUTRE <br> PROPOSITION</a>
+            <a class="autrePopositionText" (click)=" initTenue() ">AUTRE<br> PROPOSITION </a>
         </div>
 
     </div>
 
 
 </div>
-
-<!-- Footer 
-<div class=" commonFooter ">
-    <div class="elegance ">
-        <img class="imageElegance " src="./assets/images/elegance.png " />
-    </div>
-    <footer class="page-footer font-small mdb-color pt-4 ">
-        <p class="copyrightText ">© 2020 Copyright
-            <strong> DressMe</strong>
-        </p>
-    </footer>
-</div>-->

@@ -27,10 +27,10 @@ export class MaTenueComponent implements OnInit {
   tenue : Tenue;
 
   constructor(
-    public router : Router, 
+    public router : Router,
     private tenueService : TenueService,
     private meteoService: MeteoService
-    ) { 
+    ) {
     this.router = router;
   }
 
@@ -43,7 +43,7 @@ export class MaTenueComponent implements OnInit {
     this.imgChoice = 0;
     this.jour = 0;
     this.periode = 0;
-    
+
   }
 
   madeMyChoice(type : number){
@@ -70,22 +70,16 @@ export class MaTenueComponent implements OnInit {
     }
     else{
       this.next -= 2;
-    }    
+    }
   }
 
   clickArrowRight(){
-
       this.next = 4;
-      this.getMeteo("Paris");
-      //this.initTenue();
-
+     this.getMeteo("Paris");
+       //this.initTenue();
   }
 
   initTenue(){
-    // this.tenueType
-    // this.periode
-    // this.jour
-    // appeler l'api pour la meteo ?
     switch ( this.tenueType ) {
       case 1:
         this.tenueTypeToPass = "decontracte";
@@ -100,8 +94,9 @@ export class MaTenueComponent implements OnInit {
         this.tenueTypeToPass = "soiree";
         break;
    }
+   console.log(this.summary);
     this.tenueService.ProposerTenue(this.summary, this.tenueTypeToPass).subscribe(data => {this.tenue = data;});
-    
+    //this.tenueService.ProposerTenue("frais", this.tenueTypeToPass).subscribe(data => {this.tenue = data;});
   }
 
   getMeteo(city: string){
@@ -114,10 +109,10 @@ export class MaTenueComponent implements OnInit {
   initSummary(){
     console.log(this.meteo);
     this.temp = parseInt(this.meteo.temp);
-    if(this.temp < 5) this.summary = 'froid';
-    else if(this.temp >= 5 && this.temp < 15) this.summary = 'frais';
-    else if(this.temp >= 15 && this.temp < 25) this.summary = 'bon';
-    else this.summary = 'chaud';
+    if(this.temp < 5) {this.summary = "froid";}
+    else if(this.temp >= 5 && this.temp < 15) {this.summary = "frais";}
+    else if(this.temp >= 15 && this.temp < 25) {this.summary = "bon";}
+    else { this.summary = "chaud";}
 
     this.initTenue();
   }
