@@ -91,9 +91,9 @@
                 </div>
             </div>
             <div class="motifsEtSelector">
-                <div class="form-check form-switch " id="motifs ">
-                    <input class="form-check-input " type="checkbox " id="flexSwitchCheckDefault ">
-                    <label class="form-check-label " for="flexSwitchCheckDefault ">MOTIFS</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault ">MOTIFS</label>
                 </div>
                 <div class="selector">
                     <ng-container *ngIf="categorie===1 ">
@@ -232,8 +232,8 @@
     <div class='reste'>
         <div class='groupeChoixBas'>
         </div>
-        <button type="button " id='pageButton'>ANNULER</button>
-        <button type="button " id='pageButton' (click)="addItem() ">SAUVEGARDER</button>
+        <button type="button " id='pageButton' routerLink="">ANNULER</button>
+        <button type="button " id='pageButton' (click)="addItem()" routerLink="../monDressing">SAUVEGARDER</button>
     </div>
     <div class=" vide2 ">
     </div>
